@@ -55,6 +55,9 @@ module.exports = {
       },
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],
+        opensans: ['Open Sans', ...fontFamily.sans],
+        prompt: ['Prompt', ...fontFamily.sans],
+        promptbold600: ['Prompt:wght@600', ...fontFamily.sans]
       },
       keyframes: {
         "accordion-down": {

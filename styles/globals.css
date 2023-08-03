@@ -34,10 +34,14 @@
     --ring: 215 20.2% 65.1%;
 
     --radius: 0.5rem;
+
+    --color-one: 42 100% 79%;
+    --color-two: 52 100% 79%;
+    --color-thr: 39 48% 79%;
   }
 
   .dark {
-    --background: 224 71% 4%;
+    --background: 240 30% 5%;
     --foreground: 213 31% 91%;
 
     --muted: 223 47% 11%;
@@ -67,6 +71,10 @@
     --ring: 216 34% 17%;
 
     --radius: 0.5rem;
+
+    --color-one: #0f172a;
+    --color-two: #111827;
+    --color-thr: #18181b;
   }
 }
 
