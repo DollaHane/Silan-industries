@@ -27,6 +27,24 @@ module.exports = {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
         },
+        colorOne: {
+          DEFAULT: "hsl(var(--colorOne))",
+        },
+        colorTwo: {
+          DEFAULT: "hsl(var(--colorTwo))",
+        },
+        colorThr: {
+          DEFAULT: "hsl(var(--colorThr))",
+        },
+        colorFou: {
+          DEFAULT: "hsl(var(--colorFou))",
+        }
+        ,colorFiv: {
+          DEFAULT: "hsl(var(--colorFiv))",
+        }
+        ,colorSix: {
+          DEFAULT: "hsl(var(--colorSix))",
+        },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",
