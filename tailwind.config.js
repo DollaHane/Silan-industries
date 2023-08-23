@@ -38,12 +38,21 @@ module.exports = {
         },
         colorFou: {
           DEFAULT: "hsl(var(--colorFou))",
-        }
-        ,colorFiv: {
+        },
+        colorFiv: {
           DEFAULT: "hsl(var(--colorFiv))",
-        }
-        ,colorSix: {
+        },
+        colorSix: {
           DEFAULT: "hsl(var(--colorSix))",
+        },
+        colorSev: {
+          DEFAULT: "hsl(var(--colorSev))",
+        },
+        colorEig: {
+          DEFAULT: "hsl(var(--colorEig))",
+        },
+        colorNin: {
+          DEFAULT: "hsl(var(--colorNin))",
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",

@@ -8,7 +8,7 @@ import { SelectedPage } from '@/types/types';
 // IMAGE Imports
 import ServicesOne from '../assets/ServicesOne.jpeg'
 import ServicesTwo from '../assets/ServicesTwo.jpeg'
-import ServicesThree from '../assets/ServicesThree.jpeg'
+import ServicesFive from '../assets/ServicesFive.jpeg'
 import ServicesFour from '../assets/ServicesFour.jpeg'
 
 type Props = {
@@ -24,11 +24,11 @@ export default function Services({ setSelectedPage }: Props) {
       >
 
         {/* SERVICES & IMAGES */}
-        <div className=' grid grid-cols-1 p-2'>
+        <div className=' grid grid-cols-1'>
 
           {/* SERVICES */}
           <motion.div 
-            className='grid grid-cols-1 md:grid-cols-2 gap-4 p-5 text-center md:text-left'
+            className='grid grid-cols-1 md:grid-cols-4 gap-5 p-5 text-center md:text-left'
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.5 }}
@@ -39,21 +39,31 @@ export default function Services({ setSelectedPage }: Props) {
             }}
           >
             <div>
-              <h1 className='mb-5'>Services:</h1>
+              <h1 className='mb-2 text-lg font-bold'>Process & CAD Design:</h1>
               <p className='mb-5'>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus tortor sed lectus lacinia, sed sagittis nunc blandit. 
-                Morbi luctus, leo vitae ullamcorper tincidunt, erat quam dictum erat, ac aliquet lectus justo sed augue. 
-                Integer et ipsum et justo ultricies volutpat. 
-                Nunc at tellus rhoncus, porta nulla a, lacinia tellus.
+                Morbi luctus, leo vitae ullamcorper tincidunt.
               </p>
             </div>
             <div>
-              <h1 className='mb-5'>Services:</h1>
+              <h1 className='mb-2 text-lg font-bold'>Project Management:</h1>
               <p className='mb-5'>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus tortor sed lectus lacinia, sed sagittis nunc blandit. 
-                Morbi luctus, leo vitae ullamcorper tincidunt, erat quam dictum erat, ac aliquet lectus justo sed augue. 
-                Integer et ipsum et justo ultricies volutpat. 
-                Nunc at tellus rhoncus, porta nulla a, lacinia tellus.
+                Morbi luctus, leo vitae ullamcorper tincidunt.
+              </p>
+            </div>
+            <div>
+              <h1 className='mb-2 text-lg font-bold'>Measuring:</h1>
+              <p className='mb-5'>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus tortor sed lectus lacinia, sed sagittis nunc blandit. 
+                Morbi luctus, leo vitae ullamcorper tincidunt.
+              </p>
+            </div>
+            <div>
+              <h1 className='mb-2 text-lg font-bold'>Manufacturing:</h1>
+              <p className='mb-5'>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus tortor sed lectus lacinia, sed sagittis nunc blandit. 
+                Morbi luctus, leo vitae ullamcorper tincidunt.
               </p>
             </div>
           </motion.div>
@@ -72,33 +82,40 @@ export default function Services({ setSelectedPage }: Props) {
           >
             
             <div className='grid grid-cols-1 md:grid-cols-2 gap-5'>
-              <div className='grid grid-cols-2 gap-5'>
 
-                <div className='relative h-80'>
-                  <div className='flex group hover:transform hover:scale-90 transition duration-500'>
-                    <Image alt='design' src={ServicesOne}  className='flex h-80 md:h-44 object-cover rounded-tl-[50px] rounded-lg shadow-lg z-30'/>
-                    <div className='absolute flex w-36 h-20 top-0 left-0 rounded-tl-[50px] rounded bg-amber-300 z-20 shadow-lg items-start justify-end hover:transform group-hover:-translate-y-10 transition duration-500'>
+              <div className='grid grid-cols-1 gap-5'>
+
+                <div className='grid grid-cols-2 gap-5'>
+                  <div className='relative'>
+                    <div className='flex group hover:transform hover:scale-95 transition duration-500 justify-center'>
+                      <Image alt='process' src={ServicesFive}  className='flex h-50 md:h-[10rem] object-cover rounded-lg shadow-lg z-30 items-start justify-center'/>
+                    </div>
+                  </div>
+                  <div className='relative'>
+                    <div className='flex group hover:transform hover:scale-95 transition duration-500 justify-center'>
+                      <Image alt='process' src={ServicesTwo}  className='flex h-50 md:h-[10rem] object-cover rounded-lg shadow-lg z-30 items-start justify-center'/>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div className='relative'>
+                  <div className='flex group hover:transform hover:scale-95 transition duration-500'>
+                    <Image alt='design' src={ServicesOne}  className='flex h-60 md:h-[10rem] object-cover rounded-lg shadow-lg z-30'/>
+                    <div className='absolute flex w-36 h-10 -top-2 -left-2 rounded-lg bg-amber-300 bg-opacity-80 z-40 shadow-lg items-center justify-center hover:transform group-hover:-translate-y-1 group-hover:-translate-x-1 transition duration-500'>
                       <p className='flex text-zinc-900 text-md font-bold text-center p-2'>From concept..</p>
                     </div>
                   </div>
                 </div>
 
-                <div className='relative h-80'>
-                  <div className='flex group hover:transform hover:scale-90 transition duration-500 justify-center'>
-                    <Image alt='process' src={ServicesTwo}  className='flex h-80 md:h-60 object-cover rounded-lg shadow-lg z-30 items-start justify-center'/>
-                    <div className='absolute flex w-36 h-20 top-0 rounded bg-amber-300 z-20 shadow-lg items-start justify-center hover:transform group-hover:-translate-y-10 transition duration-500'>
-                      <p className='flex text-zinc-900 text-md font-bold text-center p-2'>to..</p>
-                    </div>
-                  </div>
-                </div>
 
               </div>
 
-              <div className='relative h-60'>
-                <div className='flex group hover:transform hover:scale-90 transition duration-500'>
-                  <Image alt='tooling' src={ServicesFour} className='flex h-60 md:h-80 object-cover rounded-br-[50px] rounded-lg shadow-lg z-30'/>
-                  <div className='absolute flex w-64 h-20 bottom-0 right-0 rounded-br-[50px] rounded bg-amber-300 z-20 shadow-lg items-end justify-center hover:transform group-hover:translate-y-10 transition duration-500'>
-                    <p className='flex text-zinc-900 text-md font-bold text-center p-2'>production.</p>
+              <div className='relative'>
+                <div className='flex group hover:transform hover:scale-95 transition duration-500'>
+                  <Image alt='tooling' src={ServicesFour} className='flex h-60 md:h-[21.5rem] object-cover rounded-lg shadow-lg z-30'/>
+                  <div className='absolute flex w-36 h-10 -top-2 -right-2 rounded-lg bg-amber-300 bg-opacity-80 z-40 shadow-lg items-center justify-center hover:transform group-hover:translate-y-1 group-hover:-translate-x-1 transition duration-500'>
+                    <p className='flex text-zinc-900 text-md font-bold text-center p-2'>to production.</p>
                   </div>
                 </div>
               </div>

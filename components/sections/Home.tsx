@@ -5,7 +5,8 @@ import AnchorLink from 'react-anchor-link-smooth-scroll'
 import { SelectedPage } from '@/types/types'
 import useMediaQuery from '@/hooks/useMediaQuery'
 import { Button } from '../ui/button'
-import Graphic from '../assets/Group 4-2.png'
+import Graphic from '../assets/Group 14.png'
+import Model from '../assets/Rugby.png'
 import { useTheme } from 'next-themes'
 
 type Props = {
@@ -111,7 +112,7 @@ export default function Home({ setSelectedPage }: Props) {
         {/* IMAGE / RIGHT SIDE */}
         <div className='w-full p-4'>
           <motion.div 
-            className='w-8/9 justify-center align-center mx-auto'
+            className='relative w-8/9 justify-center align-center mx-auto'
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.5 }}
@@ -121,7 +122,8 @@ export default function Home({ setSelectedPage }: Props) {
               visible: { opacity: 1, x: 0 },
             }}
           >
-            <Image className='' alt="home-pageGraphic" src={Graphic}/>
+            <Image className='relative z-40' alt="home-pageGraphic" src={Model}/>
+            <Image className='absolute top-10 right-10 rotate-6 z-30' alt="home-pageGraphic" src={Graphic}/>
           </motion.div>
         </div>
       
