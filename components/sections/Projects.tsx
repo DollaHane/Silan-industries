@@ -1,6 +1,6 @@
 import React from "react"
 import Image from "next/image"
-import { ChevronLeftIcon, ChevronRightIcon, ChevronsRight } from "lucide-react"
+import { ChevronLeft, ChevronRight, ChevronsRight } from "lucide-react"
 import { Carousel } from "react-responsive-carousel"
 
 import "react-responsive-carousel/lib/styles/carousel.min.css"
@@ -121,7 +121,7 @@ export default function ({ setSelectedPage }: Props) {
               onClick={onClickHandler}
               className="absolute w-10 h-10 top-[50%] -left-3 z-40"
             >
-              <ChevronLeftIcon className="w-15 h-15 mx-auto" />
+              <ChevronLeft className="w-15 h-15 mx-auto" />
             </button>
           )}
           renderArrowNext={(onClickHandler, hasNext, label) => (
@@ -129,7 +129,7 @@ export default function ({ setSelectedPage }: Props) {
               onClick={onClickHandler}
               className="absolute w-10 h-10 top-[50%] -right-3 z-40"
             >
-              <ChevronRightIcon className="w-15 h-15 mx-auto" />
+              <ChevronRight className="w-15 h-15 mx-auto" />
             </button>
           )}
         >
