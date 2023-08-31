@@ -2,6 +2,7 @@
 // REACT & TOOLS Imports
 import React from 'react'
 import { Button } from '../ui/button';
+import PigeonMap from '../PigeonMap';
 
 // MUI & TOOLS Imports
 import { useForm } from "react-hook-form";
@@ -31,10 +32,10 @@ export default function ContactUs({ setSelectedPage }: Props) {
   }
 
   return (
-    <section id="contactus" className='flex w-full h-screen p-10 z-40'>
+    <section id="contactus" className='flex w-full h-screen mb-44 mx-auto p-10 z-40'>
       <motion.div 
         onViewportEnter={() => setSelectedPage(SelectedPage.ContactUs)}
-        className='mt-20'
+        className='mt-20 w-full mx-auto'
       >
 
         {/* HEADER */}
@@ -49,14 +50,17 @@ export default function ContactUs({ setSelectedPage }: Props) {
             visible: { opacity: 1, x: 0 },
           }}
         >
-          <p className='text-sm md:text-base p-2'>
+          <h1 className="my-5 font-bold font-prompt text-3xl">
+          Contact:
+          </h1>
+          <p className='text-sm md:text-base'>
             For any queries, or to book a consulation, please do not hesitate to contact us by completing the form below. 
             We would really appreciate hearing from you.
           </p>
         </motion.div>
 
         {/* FORM & IMAGE */}
-        <div className=' grid grid-cols-1 md:grid-cols-2 p-2 mt-5'>
+        <div className=' grid grid-cols-1 md:grid-cols-2 mt-5'>
           <motion.div 
             className=''
             initial="hidden"
@@ -70,7 +74,7 @@ export default function ContactUs({ setSelectedPage }: Props) {
           >
 
             <form
-              className='grid grid-cols-1 gap-4'
+              className='grid grid-cols-1 gap-4 p-5'
               target="_blank"
               onSubmit={onSubmit}
               action="https://formsubmit.co/e8a5bdfa807605332f809e5656e27c6e"
@@ -147,6 +151,11 @@ export default function ContactUs({ setSelectedPage }: Props) {
               visible: { opacity: 1, y: 0 },
             }}
           >
+            <div className='w-full p-5'>
+              <div className='w-full h-[282px] rounded-lg overflow-hidden shadow-lg'>
+                <PigeonMap/>
+              </div>
+            </div>
           </motion.div>
 
         </div>

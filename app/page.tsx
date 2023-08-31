@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react'
 import Navbar from '@/components/sections/NavBar'
 import Home from '@/components/sections/Home'
 import Services from '@/components/sections/Services'
+import Projects from '@/components/sections/Projects'
 import ContactUs from '@/components/sections/ContactUs'
 import { SelectedPage } from '@/types/types'
 
@@ -34,6 +35,7 @@ export default function IndexPage() {
         />
         <Home setSelectedPage={setSelectedPage}/>
         <Services setSelectedPage={setSelectedPage}/>
+        <Projects setSelectedPage={setSelectedPage}/>
         <ContactUs setSelectedPage={setSelectedPage}/>
       </div>
     </div>
