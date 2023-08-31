@@ -60,9 +60,8 @@ export default function ContactUs({ setSelectedPage }: Props) {
         </motion.div>
 
         {/* FORM & IMAGE */}
-        <div className=" grid grid-cols-1 md:grid-cols-2 mt-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 mt-5">
           <motion.div
-            className=""
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.5 }}

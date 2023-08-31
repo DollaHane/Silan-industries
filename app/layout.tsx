@@ -2,7 +2,6 @@ import "@/styles/globals.css"
 import { Metadata } from "next"
 
 import { siteConfig } from "@/config/site"
-import { fontSans } from "@/lib/fonts"
 import { cn } from "@/lib/utils"
 import { TailwindIndicator } from "@/components/theme/tailwind-indicator"
 import { ThemeProvider } from "@/components/theme/theme-provider"
