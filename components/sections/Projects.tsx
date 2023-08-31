@@ -13,7 +13,6 @@ import Project2 from "../assets/Project 2.png"
 import Project3 from "../assets/Project 3.png"
 import Project4 from "../assets/Project 4.png"
 import Project5 from "../assets/Project 5.png"
-import Project6 from "../assets/Project 6.png"
 import Project7 from "../assets/Project 7.png"
 import Project8 from "../assets/Project 8.png"
 

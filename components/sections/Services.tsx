@@ -25,9 +25,7 @@ export default function Services({ setSelectedPage }: Props) {
         onViewportEnter={() => setSelectedPage(SelectedPage.Services)}
         className="mt-20 w-full h-auto min-h-screen"
       >
-        <h1 className="my-5 px-5 font-bold font-prompt text-3xl">
-          Services:
-        </h1>
+        <h1 className="my-5 px-5 font-bold font-prompt text-3xl">Services:</h1>
         {/* SERVICES & IMAGES */}
         <div className=" grid grid-cols-1">
           {/* SERVICES */}
@@ -67,7 +65,9 @@ export default function Services({ setSelectedPage }: Props) {
               </p>
             </div>
             <div>
-              <h1 className="mb-2 text-lg font-bold">Manufacturing & Automation:</h1>
+              <h1 className="mb-2 text-lg font-bold">
+                Manufacturing & Automation:
+              </h1>
               <p className="mb-5">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
                 cursus tortor sed lectus lacinia, sed sagittis nunc blandit.
@@ -148,20 +148,3 @@ export default function Services({ setSelectedPage }: Props) {
     </section>
   )
 }
-
-/*
-<div className='relative h-60'>
-                <div className='group flex h-60 overflow-hidden rounded-br-[50px] rounded shadow-lg hover:transform hover:scale-110 transition duration-500'>
-                  <Image
-                    alt='tooling'
-                    src={ServicesFour}
-                    className='object-cover w-full h-full '
-                  />
-                  <div className='absolute inset-0 flex items-center justify-center'>
-                    <div className='w-full h-full opacity-70 hover:transform hover:bg-gradient-to-t from-slate-100 to-opacity-0 transition duration-500'>
-                      <p className='w-full absolute bottom-5 text-zinc-900 text-xl font-bold opacity-0 group-hover:opacity-100 text-center'>...to production</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-*/

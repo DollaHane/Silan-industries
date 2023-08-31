@@ -1,46 +1,47 @@
-'use client'
-// REACT & TOOLS Imports
-import React from 'react'
-import { Button } from '../ui/button';
-import PigeonMap from '../PigeonMap';
+"use client"
 
+// REACT & TOOLS Imports
+import React from "react"
+import { motion } from "framer-motion"
 // MUI & TOOLS Imports
-import { useForm } from "react-hook-form";
-import { motion } from "framer-motion";
+import { useForm } from "react-hook-form"
 
 // COMPONENT Imports
-import { SelectedPage } from '@/types/types';
+import { SelectedPage } from "@/types/types"
+
+import PigeonMap from "../PigeonMap"
+import { Button } from "../ui/button"
 
 type Props = {
-  setSelectedPage: ( value: SelectedPage ) => void
+  setSelectedPage: (value: SelectedPage) => void
 }
 
 export default function ContactUs({ setSelectedPage }: Props) {
-
-
   const {
     register,
     trigger,
     formState: { errors },
-  } = useForm();
+  } = useForm()
 
   const onSubmit = async (event: any) => {
-    const isValid = await trigger();
+    const isValid = await trigger()
     if (!isValid) {
-      event.preventDefault();
+      event.preventDefault()
     }
   }
 
   return (
-    <section id="contactus" className='flex w-full h-screen mb-44 mx-auto p-10 z-40'>
-      <motion.div 
+    <section
+      id="contactus"
+      className="flex w-full h-screen mb-44 mx-auto p-10 z-40"
+    >
+      <motion.div
         onViewportEnter={() => setSelectedPage(SelectedPage.ContactUs)}
-        className='mt-20 w-full mx-auto'
+        className="mt-20 w-full mx-auto"
       >
-
         {/* HEADER */}
-        <motion.div 
-          className='p-2'
+        <motion.div
+          className="p-2"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
@@ -50,19 +51,18 @@ export default function ContactUs({ setSelectedPage }: Props) {
             visible: { opacity: 1, x: 0 },
           }}
         >
-          <h1 className="my-5 font-bold font-prompt text-3xl">
-          Contact:
-          </h1>
-          <p className='text-sm md:text-base'>
-            For any queries, or to book a consulation, please do not hesitate to contact us by completing the form below. 
-            We would really appreciate hearing from you.
+          <h1 className="my-5 font-bold font-prompt text-3xl">Contact:</h1>
+          <p className="text-sm md:text-base">
+            For any queries, or to book a consulation, please do not hesitate to
+            contact us by completing the form below. We would really appreciate
+            hearing from you.
           </p>
         </motion.div>
 
         {/* FORM & IMAGE */}
-        <div className=' grid grid-cols-1 md:grid-cols-2 mt-5'>
-          <motion.div 
-            className=''
+        <div className=" grid grid-cols-1 md:grid-cols-2 mt-5">
+          <motion.div
+            className=""
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.5 }}
@@ -72,9 +72,8 @@ export default function ContactUs({ setSelectedPage }: Props) {
               visible: { opacity: 1, y: 0 },
             }}
           >
-
             <form
-              className='grid grid-cols-1 gap-4 p-5'
+              className="grid grid-cols-1 gap-4 p-5"
               target="_blank"
               onSubmit={onSubmit}
               action="https://formsubmit.co/e8a5bdfa807605332f809e5656e27c6e"
@@ -82,7 +81,7 @@ export default function ContactUs({ setSelectedPage }: Props) {
             >
               <input
                 id="name"
-                className='rounded bg-transparent bg-opacity-0 border border-slate-400 text-zinc-800 text-sm p-2 shadow-md'
+                className="rounded bg-transparent bg-opacity-0 border border-slate-400 text-zinc-800 text-sm p-2 shadow-md"
                 type="text"
                 placeholder="Full Name"
                 {...register("name", {
@@ -91,7 +90,7 @@ export default function ContactUs({ setSelectedPage }: Props) {
                 })}
               />
               {errors.name && (
-                <p className=''>
+                <p className="">
                   {errors.name.type === "required" && "This field is required."}
                   {errors.name.type === "maxLength" &&
                     "Max length is 100 char."}
@@ -99,7 +98,7 @@ export default function ContactUs({ setSelectedPage }: Props) {
               )}
 
               <input
-                className='rounded bg-transparent bg-opacity-0 border border-slate-400 text-zinc-800 text-sm p-2 shadow-md'
+                className="rounded bg-transparent bg-opacity-0 border border-slate-400 text-zinc-800 text-sm p-2 shadow-md"
                 type="text"
                 id="email"
                 placeholder="Email"
@@ -109,7 +108,7 @@ export default function ContactUs({ setSelectedPage }: Props) {
                 })}
               />
               {errors.email && (
-                <p className=''>
+                <p className="">
                   {errors.email.type === "required" &&
                     "This field is required."}
                   {errors.email.type === "pattern" && "Invalid email address."}
@@ -117,7 +116,7 @@ export default function ContactUs({ setSelectedPage }: Props) {
               )}
 
               <textarea
-                className='rounded bg-transparent bg-opacity-0 border border-slate-400 text-zinc-800 text-sm p-2 shadow-md'
+                className="rounded bg-transparent bg-opacity-0 border border-slate-400 text-zinc-800 text-sm p-2 shadow-md"
                 placeholder="Message.."
                 rows={5}
                 {...register("message", {
@@ -126,7 +125,7 @@ export default function ContactUs({ setSelectedPage }: Props) {
                 })}
               />
               {errors.message && (
-                <p className=''>
+                <p className="">
                   {errors.message.type === "required" &&
                     "This field is required."}
                   {errors.message.type === "maxLength" &&
@@ -134,14 +133,17 @@ export default function ContactUs({ setSelectedPage }: Props) {
                 </p>
               )}
 
-              <Button variant='outline' className='font-bold border border-slate-400 shadow-md'>SEND</Button>
-              
+              <Button
+                variant="outline"
+                className="font-bold border border-slate-400 shadow-md"
+              >
+                SEND
+              </Button>
             </form>
-
           </motion.div>
 
-          <motion.div 
-            className=''
+          <motion.div
+            className=""
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.5 }}
@@ -151,16 +153,14 @@ export default function ContactUs({ setSelectedPage }: Props) {
               visible: { opacity: 1, y: 0 },
             }}
           >
-            <div className='w-full p-5'>
-              <div className='w-full h-[282px] rounded-lg overflow-hidden shadow-lg'>
-                <PigeonMap/>
+            <div className="w-full p-5">
+              <div className="w-full h-[282px] rounded-lg overflow-hidden shadow-lg">
+                <PigeonMap />
               </div>
             </div>
           </motion.div>
-
         </div>
-
       </motion.div>
     </section>
-  );
-};
+  )
+}
