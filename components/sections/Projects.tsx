@@ -21,7 +21,7 @@ type Props = {
   setSelectedPage: (value: SelectedPage) => void
 }
 
-export default function ({ setSelectedPage }: Props) {
+export default function Projects ({ setSelectedPage }: Props) {
   const cards = [
     {
       index: 0,
@@ -140,14 +140,14 @@ export default function ({ setSelectedPage }: Props) {
                 {card.title}
               </h1>
               <div className="mx-auto flex w-full flex-wrap content-center justify-center gap-5 rounded-lg p-10">
-                <div className="w-6/12 min-w-[350px] transition duration-500 hover:scale-95 hover:transform">
+                <div className="w-6/12 min-w-[350px] transition duration-500 hover:scale-95">
                   <Image
                     className="max-h-80 w-full rounded-2xl object-cover shadow-lg "
                     alt={card.title}
                     src={card.image}
                   />
                 </div>
-                <div className="h-full w-4/12 min-w-[200px] rounded-2xl bg-slate-200 bg-opacity-20 px-3 shadow-lg">
+                <div className="h-full w-4/12 min-w-[200px] rounded-2xl bg-slate-200/20 px-3 shadow-lg">
                   <p className="my-5 text-start">{card.paragraph}</p>
                   <ul className="my-5 text-start">
                     {card.list.map((item: any, index: any) => (

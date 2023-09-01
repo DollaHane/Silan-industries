@@ -80,7 +80,7 @@ export default function ContactUs({ setSelectedPage }: Props) {
             >
               <input
                 id="name"
-                className="rounded border border-slate-400 bg-transparent bg-opacity-0 p-2 text-sm text-zinc-800 shadow-md"
+                className="rounded border border-slate-400 bg-transparent p-2 text-sm text-zinc-800 shadow-md"
                 type="text"
                 placeholder="Full Name"
                 {...register("name", {
@@ -97,7 +97,7 @@ export default function ContactUs({ setSelectedPage }: Props) {
               )}
 
               <input
-                className="rounded border border-slate-400 bg-opacity-0 p-2 text-sm text-zinc-800 shadow-md"
+                className="rounded border border-slate-400 bg-transparent p-2 text-sm text-zinc-800 shadow-md"
                 type="text"
                 id="email"
                 placeholder="Email"
@@ -115,7 +115,7 @@ export default function ContactUs({ setSelectedPage }: Props) {
               )}
 
               <textarea
-                className="rounded border border-slate-400 bg-transparent bg-opacity-0 p-2 text-sm text-zinc-800 shadow-md"
+                className="rounded border border-slate-400 bg-transparent p-2 text-sm text-zinc-800 shadow-md"
                 placeholder="Message.."
                 rows={5}
                 {...register("message", {

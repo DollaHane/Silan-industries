@@ -19,7 +19,7 @@ export default function Services({ setSelectedPage }: Props) {
   return (
     <section
       id="services"
-      className="z-30 h-full w-full bg-slate-400 bg-opacity-10 p-10 "
+      className="z-30 h-full w-full bg-slate-400/10 p-10 "
     >
       <motion.div
         onViewportEnter={() => setSelectedPage(SelectedPage.Services)}
@@ -92,7 +92,7 @@ export default function Services({ setSelectedPage }: Props) {
               <div className="grid grid-cols-1 gap-5">
                 <div className="grid grid-cols-2 gap-5">
                   <div className="relative">
-                    <div className="group flex justify-center transition duration-500 hover:scale-95 hover:transform">
+                    <div className="group flex justify-center transition duration-500 hover:scale-95">
                       <Image
                         alt="process"
                         src={ServicesFive}
@@ -101,7 +101,7 @@ export default function Services({ setSelectedPage }: Props) {
                     </div>
                   </div>
                   <div className="relative">
-                    <div className="group flex justify-center transition duration-500 hover:scale-95 hover:transform">
+                    <div className="group flex justify-center transition duration-500 hover:scale-95">
                       <Image
                         alt="process"
                         src={ServicesTwo}
@@ -112,13 +112,13 @@ export default function Services({ setSelectedPage }: Props) {
                 </div>
 
                 <div className="relative">
-                  <div className="group flex transition duration-500 hover:scale-95 hover:transform">
+                  <div className="group flex transition duration-500 hover:scale-95">
                     <Image
                       alt="design"
                       src={ServicesOne}
                       className="z-30 flex h-60 rounded-lg object-cover shadow-lg md:h-[10rem]"
                     />
-                    <div className="absolute -left-2 -top-2 z-40 flex h-10 w-36 items-center justify-center rounded-lg bg-amber-300 bg-opacity-80 shadow-lg transition duration-500 hover:transform group-hover:-translate-x-1 group-hover:-translate-y-1">
+                    <div className="absolute -left-2 -top-2 z-40 flex h-10 w-36 items-center justify-center rounded-lg bg-amber-300/90 shadow-lg transition duration-500 group-hover:-translate-x-1 group-hover:-translate-y-1">
                       <p className="text-md flex p-2 text-center font-bold text-zinc-900">
                         From concept..
                       </p>
@@ -128,13 +128,13 @@ export default function Services({ setSelectedPage }: Props) {
               </div>
 
               <div className="relative">
-                <div className="group flex transition duration-500 hover:scale-95 hover:transform">
+                <div className="group flex transition duration-500 hover:scale-95">
                   <Image
                     alt="tooling"
                     src={ServicesFour}
                     className="z-30 flex h-60 rounded-lg object-cover shadow-lg md:h-[21.5rem]"
                   />
-                  <div className="absolute -right-2 -top-2 z-40 flex h-10 w-36 items-center justify-center rounded-lg bg-amber-300 bg-opacity-80 shadow-lg transition duration-500 hover:transform group-hover:-translate-x-1 group-hover:translate-y-1">
+                  <div className="absolute -right-2 -top-2 z-40 flex h-10 w-36 items-center justify-center rounded-lg bg-amber-300/90 shadow-lg transition duration-500 group-hover:-translate-x-1 group-hover:translate-y-1">
                     <p className="text-md flex p-2 text-center font-bold text-zinc-900">
                       to production.
                     </p>
