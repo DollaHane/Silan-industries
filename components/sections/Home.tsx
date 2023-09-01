@@ -27,7 +27,7 @@ export default function Home({ setSelectedPage }: Props) {
     >
       {/* IMAGE & HEADER */}
       <motion.div
-        className="mt-20 md:mt-32 grid w-full grid-cols-1 gap-4 md:grid-cols-2"
+        className="mt-20 grid w-full grid-cols-1 gap-4 md:mt-32 md:grid-cols-2"
         onViewportEnter={() => setSelectedPage(SelectedPage.Home)}
       >
         {/* HEADER / LEFT SIDE */}
@@ -100,7 +100,7 @@ export default function Home({ setSelectedPage }: Props) {
         {/* IMAGE / RIGHT SIDE */}
         <div className="w-full">
           <motion.div
-            className="w-full flex align-center relative mx-auto justify-center"
+            className="align-center relative mx-auto flex w-full justify-center"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.5 }}
@@ -111,12 +111,12 @@ export default function Home({ setSelectedPage }: Props) {
             }}
           >
             <Image
-              className="relative mx-auto w-8/12 md:w-10/12 z-40 max-w-[70vw]"
+              className="relative z-40 mx-auto w-8/12 max-w-[70vw] md:w-10/12"
               alt="home-pageGraphic"
               src={Model}
             />
             <Image
-              className="absolute w-8/12 md:w-10/12 mx-auto top-10 z-30 rotate-6 max-w-[50vw]"
+              className="absolute top-10 z-30 mx-auto w-8/12 max-w-[50vw] rotate-6 md:w-10/12"
               alt="home-pageGraphic"
               src={Graphic}
             />

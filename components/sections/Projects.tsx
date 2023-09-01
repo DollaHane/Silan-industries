@@ -7,23 +7,19 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"
 
 // COMPONENT Imports
 import { SelectedPage } from "@/types/types"
+import { cards } from "@/lib/data"
 
 // IMAGE Imports
 import ImageSkeleton from "../ui/ImageSkeleton"
-import { cards } from "@/lib/data"
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void
 }
 
 export default function Projects({ setSelectedPage }: Props) {
-  
-
   return (
-    <section 
-      id="projects" 
-      className="z-40 mx-auto flex h-[100vh] w-full p-10">
-      <div className="mx-auto h-auto mt-20 w-full">
+    <section id="projects" className="z-40 mx-auto flex h-[100vh] w-full p-10">
+      <div className="mx-auto mt-20 h-auto w-full">
         <h1 className="mb-5 font-prompt text-3xl font-bold">Projects:</h1>
         <Carousel
           className="h-9/12 mx-auto w-full"
@@ -55,10 +51,15 @@ export default function Projects({ setSelectedPage }: Props) {
         >
           {cards.map((card) => (
             <div className="w-full justify-center">
-              
               <div className="mx-auto flex w-full flex-wrap content-center justify-center gap-5 rounded-lg p-10">
                 <div className="w-6/12 min-w-[350px] transition duration-500 hover:scale-95">
-                    {<Image className="max-h-80 w-full rounded-2xl object-cover shadow-lg " alt={card.title} src={card.image}/> || <ImageSkeleton />}
+                  {(
+                    <Image
+                      className="max-h-80 w-full rounded-2xl object-cover shadow-lg "
+                      alt={card.title}
+                      src={card.image}
+                    />
+                  ) || <ImageSkeleton />}
                 </div>
                 <div className="h-full w-4/12 min-w-[200px] rounded-2xl bg-slate-200/20 px-3 shadow-lg">
                   <h1 className="mt-5 w-full text-left text-xl font-extrabold">

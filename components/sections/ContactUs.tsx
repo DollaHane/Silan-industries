@@ -34,7 +34,7 @@ export default function ContactUs({ setSelectedPage }: Props) {
   return (
     <section
       id="contactus"
-      className="z-40 mx-auto h-auto min-h-screen w-full p-10 bg-slate-400/10"
+      className="z-40 mx-auto h-auto min-h-screen w-full bg-slate-400/10 p-10"
     >
       <motion.div
         onViewportEnter={() => setSelectedPage(SelectedPage.ContactUs)}
@@ -161,7 +161,7 @@ export default function ContactUs({ setSelectedPage }: Props) {
         </div>
 
         {/* CONTACT DETAILS */}
-        <div className="mt-5 grid w-full grid-cols-1 px-5 md:grid-cols-2 text-sm">
+        <div className="mt-5 grid w-full grid-cols-1 px-5 text-sm md:grid-cols-2">
           {/* LEFT */}
           <motion.div
             initial="hidden"
@@ -173,7 +173,7 @@ export default function ContactUs({ setSelectedPage }: Props) {
               visible: { opacity: 1, y: 0 },
             }}
           >
-            <div className="mb-5 w-full grid grid-cols-1 gap-3">
+            <div className="mb-5 grid w-full grid-cols-1 gap-3">
               <div className="flex gap-5">
                 <p className="w-32 font-semibold italic">General Manager:</p>
                 <p>Michael Hübsch</p>
@@ -201,7 +201,7 @@ export default function ContactUs({ setSelectedPage }: Props) {
               visible: { opacity: 1, y: 0 },
             }}
           >
-            <div className="mb-5 w-full grid grid-cols-1 gap-3">
+            <div className="mb-5 grid w-full grid-cols-1 gap-3">
               <div className="flex gap-5">
                 <p className="w-32 font-semibold italic">Address:</p>
                 <p>Portion 1 | Plot 68 | Farm 23</p>
