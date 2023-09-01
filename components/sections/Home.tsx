@@ -23,15 +23,15 @@ export default function Home({ setSelectedPage }: Props) {
   return (
     <section
       id="home"
-      className="w-full h-full p-10 z-40 justify-center text-center md:text-left"
+      className="z-40 h-full w-full justify-center p-10 text-center md:text-left"
     >
       {/* IMAGE & HEADER */}
       <motion.div
-        className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full h-auto min-h-screen mt-28"
+        className="mt-28 grid h-auto min-h-screen w-full grid-cols-1 gap-4 md:grid-cols-2"
         onViewportEnter={() => setSelectedPage(SelectedPage.Home)}
       >
         {/* HEADER / LEFT SIDE */}
-        <div className="w-full p-2 mb-8">
+        <div className="mb-8 w-full p-2">
           {/* HEADING LOGO & SLOGAN */}
           <motion.div
             className="h-auto"
@@ -46,27 +46,27 @@ export default function Home({ setSelectedPage }: Props) {
           >
             {/* MAIN HEADING */}
             <div
-              className={`flex bold text-4xl md:text-4xl lg:text-5xl p-2 bg-clip-text bg-repeat-x text-transparent bg-gradient-to-r 
+              className={`bold flex bg-gradient-to-r bg-clip-text bg-repeat-x p-2 text-4xl text-transparent md:text-4xl lg:text-5xl 
                 ${
                   theme !== "light"
                     ? " from-yellow-300 via-amber-500 to-amber-400"
                     : " from-blue-950 via-slate-500 to-blue-900"
                 }`}
             >
-              <div className="flex flex-wrap mx-auto md:mx-0">
-                <p className="pt-1 pr-1 font-prompt font-semibold">SILAN</p>
+              <div className="mx-auto flex flex-wrap md:mx-0">
+                <p className="pr-1 pt-1 font-prompt font-semibold">SILAN</p>
                 <p className="p-1 font-prompt font-semibold">INDUSTRIES</p>
-                <p className="text-base mt-0 p-1 font-prompt">(Pty) Ltd</p>
+                <p className="mt-0 p-1 font-prompt text-base">(Pty) Ltd</p>
               </div>
             </div>
 
             {/* INTRODUCTION TEXT */}
-            <h2 className="bold text-2xl md:text-2xl lg:text-4xl font-prompt font-medium my-3 p-2">
+            <h2 className="bold my-3 p-2 font-prompt text-2xl font-medium md:text-2xl lg:text-4xl">
               TOOLING DESIGN & SIMULATION
             </h2>
 
             {/* INTRODUCTION TEXT */}
-            <p className="text-sm md:text-base my-3 p-2">
+            <p className="my-3 p-2 text-sm md:text-base">
               Spacialists in the design of automotive assembly systems, robotic
               applications and special purpose tooling.
             </p>
@@ -74,7 +74,7 @@ export default function Home({ setSelectedPage }: Props) {
 
           {/* ACTION BUTTONS */}
           <motion.div
-            className="flex p-2 content-center justify-center text-center"
+            className="flex content-center justify-center p-2 text-center"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.5 }}
@@ -90,7 +90,7 @@ export default function Home({ setSelectedPage }: Props) {
             >
               <Button
                 variant="outline"
-                className="bg-amber-300 hover:bg-slate-200 text-zinc-800 font-bold shadow-md"
+                className="bg-amber-300 font-bold text-zinc-800 shadow-md hover:bg-slate-200"
               >
                 LETS CONNECT
               </Button>
@@ -114,7 +114,7 @@ export default function Home({ setSelectedPage }: Props) {
         {/* IMAGE / RIGHT SIDE */}
         <div className="w-full p-4">
           <motion.div
-            className="relative w-8/9 justify-center align-center mx-auto"
+            className="w-8/9 align-center relative mx-auto justify-center"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.5 }}
@@ -130,7 +130,7 @@ export default function Home({ setSelectedPage }: Props) {
               src={Model}
             />
             <Image
-              className="absolute top-10 right-10 rotate-6 z-30"
+              className="absolute right-10 top-10 z-30 rotate-6"
               alt="home-pageGraphic"
               src={Graphic}
             />

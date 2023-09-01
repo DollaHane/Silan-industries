@@ -29,7 +29,7 @@ export default function IndexPage() {
 
   return (
     <div className="items-center">
-      <div className="grid grid-cols-1 w-full">
+      <div className="grid w-full grid-cols-1">
         <Navbar
           isTopOfPage={isTopOfPage}
           selectedPage={selectedPage}

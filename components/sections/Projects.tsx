@@ -4,6 +4,7 @@ import { ChevronLeft, ChevronRight, ChevronsRight } from "lucide-react"
 import { Carousel } from "react-responsive-carousel"
 
 import "react-responsive-carousel/lib/styles/carousel.min.css"
+
 // COMPONENT Imports
 import { SelectedPage } from "@/types/types"
 
@@ -102,11 +103,11 @@ export default function ({ setSelectedPage }: Props) {
   ]
 
   return (
-    <section id="projects" className="w-full h-[100vh] p-10 z-30">
-      <div className="mt-20 w-full h-full mx-auto">
-        <h1 className="my-5 px-5 font-bold font-prompt text-3xl">Projects:</h1>
+    <section id="projects" className="z-30 h-[100vh] w-full p-10">
+      <div className="mx-auto mt-20 h-full w-full">
+        <h1 className="my-5 px-5 font-prompt text-3xl font-bold">Projects:</h1>
         <Carousel
-          className="w-full h-9/12 mx-auto"
+          className="h-9/12 mx-auto w-full"
           showArrows={true}
           infiniteLoop={true}
           stopOnHover={true}
@@ -119,7 +120,7 @@ export default function ({ setSelectedPage }: Props) {
           renderArrowPrev={(onClickHandler, hasPrev, label) => (
             <button
               onClick={onClickHandler}
-              className="absolute w-10 h-10 top-[50%] -left-3 z-40"
+              className="absolute -left-3 top-[50%] z-40 h-10 w-10"
             >
               <ChevronLeft className="w-15 h-15 mx-auto" />
             </button>
@@ -127,7 +128,7 @@ export default function ({ setSelectedPage }: Props) {
           renderArrowNext={(onClickHandler, hasNext, label) => (
             <button
               onClick={onClickHandler}
-              className="absolute w-10 h-10 top-[50%] -right-3 z-40"
+              className="absolute -right-3 top-[50%] z-40 h-10 w-10"
             >
               <ChevronRight className="w-15 h-15 mx-auto" />
             </button>
@@ -135,19 +136,19 @@ export default function ({ setSelectedPage }: Props) {
         >
           {cards.map((card) => (
             <div className="w-full justify-center">
-              <h1 className="w-full text-xl text-center font-extrabold mt-5">
+              <h1 className="mt-5 w-full text-center text-xl font-extrabold">
                 {card.title}
               </h1>
-              <div className="flex w-full flex-wrap gap-5 mx-auto content-center justify-center rounded-lg p-10">
-                <div className="w-6/12 min-w-[350px] hover:transform hover:scale-95 transition duration-500">
+              <div className="mx-auto flex w-full flex-wrap content-center justify-center gap-5 rounded-lg p-10">
+                <div className="w-6/12 min-w-[350px] transition duration-500 hover:scale-95 hover:transform">
                   <Image
-                    className="w-full max-h-80 object-cover rounded-2xl shadow-lg "
+                    className="max-h-80 w-full rounded-2xl object-cover shadow-lg "
                     alt={card.title}
                     src={card.image}
                   />
                 </div>
-                <div className="w-4/12 min-w-[200px] h-full rounded-2xl shadow-lg bg-slate-200 bg-opacity-20 px-3">
-                  <p className="text-start my-5">{card.paragraph}</p>
+                <div className="h-full w-4/12 min-w-[200px] rounded-2xl bg-slate-200 bg-opacity-20 px-3 shadow-lg">
+                  <p className="my-5 text-start">{card.paragraph}</p>
                   <ul className="my-5 text-start">
                     {card.list.map((item: any, index: any) => (
                       <li key={index} className="flex gap-3">

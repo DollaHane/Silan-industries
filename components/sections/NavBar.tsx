@@ -11,9 +11,9 @@ import { useTheme } from "next-themes"
 import { SelectedPage } from "@/types/types"
 import useMediaQuery from "@/hooks/useMediaQuery"
 
-import Link from "../NavBarLink"
 import LogoDark from "../assets/Silan Logo Dark.png"
 import LogoWhite from "../assets/Silan Logo White.png"
+import Link from "../NavBarLink"
 import { ThemeToggle } from "../theme/theme-toggle"
 
 type Props = {
@@ -32,8 +32,8 @@ export default function Navbar({
   const { theme } = useTheme()
 
   return (
-    <nav className="z-50 w-full fixed">
-      <div className="flex w-full h-20 p-4 backdrop-blur-md border-b">
+    <nav className="fixed z-50 w-full">
+      <div className="flex h-20 w-full border-b p-4 backdrop-blur-md">
         <div className="flex w-full">
           {/* LEFT SIDE */}
           {theme !== "light" ? (
@@ -44,9 +44,9 @@ export default function Navbar({
 
           {/* RIGHT SIDE */}
           {isAboveMediumScreens ? (
-            <div className="w-full h-full flex justify-between items-center">
+            <div className="flex h-full w-full items-center justify-between">
               {/* NAVIGATION */}
-              <div className="flex w-1/2 ml-10 justify-between text-center text-lg font-semibold items-center">
+              <div className="ml-10 flex w-1/2 items-center justify-between text-center text-lg font-semibold">
                 <Link
                   page="Home"
                   selectedPage={selectedPage}
@@ -72,7 +72,7 @@ export default function Navbar({
               <ThemeToggle />
             </div>
           ) : (
-            <div className="w-full h-full flex justify-end items-center">
+            <div className="flex h-full w-full items-center justify-end">
               <button
                 className="p-4"
                 onClick={() => setIsMenuToggled(!isMenuToggled)}
@@ -87,10 +87,10 @@ export default function Navbar({
 
       {/* MOBILE MENU MODAL */}
       {!isAboveMediumScreens && isMenuToggled && (
-        <div className="absolute z-40 right-0 top-0 w-80 h-screen">
-          <div className="flex z-40 w-80 h-full p-4 backdrop-blur-md border-l">
+        <div className="absolute right-0 top-0 z-40 h-screen w-80">
+          <div className="z-40 flex h-full w-80 border-l p-4 backdrop-blur-md">
             {/* CLOSE ICON */}
-            <div className="absolute top-0 right-0 p-8">
+            <div className="absolute right-0 top-0 p-8">
               <button
                 className=""
                 onClick={() => setIsMenuToggled(!isMenuToggled)}
@@ -100,7 +100,7 @@ export default function Navbar({
             </div>
 
             {/* NAVIGATION */}
-            <div className="grid grid-cols-1 gap-5 h-40 w-full mt-5 text-center text-lg font-semibold">
+            <div className="mt-5 grid h-40 w-full grid-cols-1 gap-5 text-center text-lg font-semibold">
               <Link
                 page="Home"
                 selectedPage={selectedPage}

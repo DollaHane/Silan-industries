@@ -33,11 +33,11 @@ export default function ContactUs({ setSelectedPage }: Props) {
   return (
     <section
       id="contactus"
-      className="flex w-full h-screen mb-44 mx-auto p-10 z-40"
+      className="z-40 mx-auto mb-44 flex h-screen w-full p-10"
     >
       <motion.div
         onViewportEnter={() => setSelectedPage(SelectedPage.ContactUs)}
-        className="mt-20 w-full mx-auto"
+        className="mx-auto mt-20 w-full"
       >
         {/* HEADER */}
         <motion.div
@@ -51,7 +51,7 @@ export default function ContactUs({ setSelectedPage }: Props) {
             visible: { opacity: 1, x: 0 },
           }}
         >
-          <h1 className="my-5 font-bold font-prompt text-3xl">Contact:</h1>
+          <h1 className="my-5 font-prompt text-3xl font-bold">Contact:</h1>
           <p className="text-sm md:text-base">
             For any queries, or to book a consulation, please do not hesitate to
             contact us by completing the form below. We would really appreciate
@@ -60,7 +60,7 @@ export default function ContactUs({ setSelectedPage }: Props) {
         </motion.div>
 
         {/* FORM & IMAGE */}
-        <div className="grid grid-cols-1 md:grid-cols-2 mt-5">
+        <div className="mt-5 grid grid-cols-1 md:grid-cols-2">
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -80,7 +80,7 @@ export default function ContactUs({ setSelectedPage }: Props) {
             >
               <input
                 id="name"
-                className="rounded bg-transparent bg-opacity-0 border border-slate-400 text-zinc-800 text-sm p-2 shadow-md"
+                className="rounded border border-slate-400 bg-transparent bg-opacity-0 p-2 text-sm text-zinc-800 shadow-md"
                 type="text"
                 placeholder="Full Name"
                 {...register("name", {
@@ -97,7 +97,7 @@ export default function ContactUs({ setSelectedPage }: Props) {
               )}
 
               <input
-                className="rounded bg-transparent bg-opacity-0 border border-slate-400 text-zinc-800 text-sm p-2 shadow-md"
+                className="rounded border border-slate-400 bg-opacity-0 p-2 text-sm text-zinc-800 shadow-md"
                 type="text"
                 id="email"
                 placeholder="Email"
@@ -115,7 +115,7 @@ export default function ContactUs({ setSelectedPage }: Props) {
               )}
 
               <textarea
-                className="rounded bg-transparent bg-opacity-0 border border-slate-400 text-zinc-800 text-sm p-2 shadow-md"
+                className="rounded border border-slate-400 bg-transparent bg-opacity-0 p-2 text-sm text-zinc-800 shadow-md"
                 placeholder="Message.."
                 rows={5}
                 {...register("message", {
@@ -134,7 +134,7 @@ export default function ContactUs({ setSelectedPage }: Props) {
 
               <Button
                 variant="outline"
-                className="font-bold border border-slate-400 shadow-md"
+                className="border border-slate-400 font-bold shadow-md"
               >
                 SEND
               </Button>
@@ -153,7 +153,7 @@ export default function ContactUs({ setSelectedPage }: Props) {
             }}
           >
             <div className="w-full p-5">
-              <div className="w-full h-[282px] rounded-lg overflow-hidden shadow-lg">
+              <div className="h-[282px] w-full overflow-hidden rounded-lg shadow-lg">
                 <PigeonMap />
               </div>
             </div>

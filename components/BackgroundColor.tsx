@@ -11,15 +11,15 @@ export default function BackgroundColor() {
     <div className="fixed">
       {theme === "light" ? (
         <div>
-          <div className="blob w-[400px] h-[400px] rounded-full absolute top-0 right-0 z-10 blur-3xl bg-opacity-60 bg-gradient-to-r from-colorOne via-colorTwo to-colorThr" />
-          <div className="blob w-[800px] h-[250px] -rotate-45 rounded-52 absolute left-96 z-10 blur-3xl bg-opacity-60 bg-gradient-to-r from-colorFou via-colorFiv to-colorSix" />
-          <div className="blob w-[800px] h-[250px] -rotate-45 rounded-52 absolute top-40 left-96 z-10 blur-3xl bg-opacity-60 bg-gradient-to-r from-colorSev via-colorEig to-colorNin" />
+          <div className="blob absolute right-0 top-0 z-10 h-[400px] w-[400px] rounded-full bg-opacity-60 bg-gradient-to-r from-colorOne via-colorTwo to-colorThr blur-3xl" />
+          <div className="blob rounded-52 absolute left-96 z-10 h-[250px] w-[800px] -rotate-45 bg-opacity-60 bg-gradient-to-r from-colorFou via-colorFiv to-colorSix blur-3xl" />
+          <div className="blob rounded-52 absolute left-96 top-40 z-10 h-[250px] w-[800px] -rotate-45 bg-opacity-60 bg-gradient-to-r from-colorSev via-colorEig to-colorNin blur-3xl" />
         </div>
       ) : (
         <div>
-          <div className="blob w-[400px] h-[400px] rounded-full absolute top-0 right-0 z-10 blur-3xl bg-opacity-60 bg-gradient-to-r from-colorOne via-colorTwo to-colorThr" />
-          <div className="blob w-[800px] h-[250px] -rotate-45 rounded-52 absolute left-96 z-10 blur-3xl bg-opacity-60 bg-gradient-to-r from-colorFou via-colorFiv to-colorSix" />
-          <div className="blob w-[800px] h-[250px] -rotate-45 rounded-52 absolute top-40 left-96 z-10 blur-3xl bg-opacity-60 bg-gradient-to-r from-colorSev via-colorEig to-colorNin" />
+          <div className="blob absolute right-0 top-0 z-10 h-[400px] w-[400px] rounded-full bg-opacity-60 bg-gradient-to-r from-colorOne via-colorTwo to-colorThr blur-3xl" />
+          <div className="blob rounded-52 absolute left-96 z-10 h-[250px] w-[800px] -rotate-45 bg-opacity-60 bg-gradient-to-r from-colorFou via-colorFiv to-colorSix blur-3xl" />
+          <div className="blob rounded-52 absolute left-96 top-40 z-10 h-[250px] w-[800px] -rotate-45 bg-opacity-60 bg-gradient-to-r from-colorSev via-colorEig to-colorNin blur-3xl" />
         </div>
       )}
     </div>
