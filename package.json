@@ -14,6 +14,8 @@
     "format:check": "prettier --check \"**/*.{ts,tsx,mdx}\" --cache"
   },
   "dependencies": {
+    "@cloudinary/react": "^1.11.2",
+    "@cloudinary/url-gen": "^1.11.2",
     "@googlemaps/react-wrapper": "^1.1.35",
     "@radix-ui/react-slot": "^1.0.2",
     "class-variance-authority": "^0.4.0",

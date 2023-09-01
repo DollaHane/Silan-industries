@@ -18,17 +18,20 @@ type Props = {
 
 export default function Services({ setSelectedPage }: Props) {
   return (
-    <section id="services" className="z-30 h-full w-full bg-slate-400/10 p-10 ">
+    <section
+      id="services"
+      className="z-40 mx-auto flex h-auto min-h-screen w-full bg-slate-400/10 p-10"
+    >
       <motion.div
         onViewportEnter={() => setSelectedPage(SelectedPage.Services)}
-        className="mt-20 h-auto min-h-screen w-full"
+        className="mx-auto mt-20 h-auto w-full"
       >
-        <h1 className="my-5 px-5 font-prompt text-3xl font-bold">Services:</h1>
+        <h1 className="mb-5 font-prompt text-3xl font-bold">Services:</h1>
         {/* SERVICES & IMAGES */}
         <div className=" grid grid-cols-1">
           {/* SERVICES */}
           <motion.div
-            className="grid grid-cols-1 gap-5 p-5 text-center md:grid-cols-4 md:text-left"
+            className="mb-5 grid grid-cols-1 gap-5 text-center md:grid-cols-4 md:text-left"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.5 }}
@@ -76,7 +79,7 @@ export default function Services({ setSelectedPage }: Props) {
 
           {/* IMAGES */}
           <motion.div
-            className="h-full"
+            className="h-auto"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.5 }}
@@ -91,49 +94,32 @@ export default function Services({ setSelectedPage }: Props) {
                 <div className="grid grid-cols-2 gap-5">
                   <div className="relative">
                     <div className="group flex justify-center transition duration-500 hover:scale-95">
-                      {!ServicesFive ? (
-                        <div className="my-auto flex h-full w-full justify-center">
-                          <ImageSkeleton />
-                        </div>
-                      ) : (
-                        <Image
-                          alt="process"
-                          src={ServicesFive}
-                          className="h-50 z-30 flex items-start justify-center rounded-lg object-cover shadow-lg md:h-[10rem]"
-                        />
-                      )}
+                      <Image
+                        alt="process"
+                        src={ServicesFive}
+                        className="h-50 z-30 flex items-start justify-center rounded-lg object-cover shadow-lg md:h-[10rem]"
+                      />
                     </div>
                   </div>
                   <div className="relative">
                     <div className="group flex justify-center transition duration-500 hover:scale-95">
-                      {!ServicesTwo ? (
-                        <div className="my-auto flex h-full w-full justify-center">
-                          <ImageSkeleton />
-                        </div>
-                      ) : (
-                        <Image
-                          alt="process"
-                          src={ServicesTwo}
-                          className="h-50 z-30 flex items-start justify-center rounded-lg object-cover shadow-lg md:h-[10rem]"
-                        />
-                      )}
+                      <Image
+                        alt="process"
+                        src={ServicesTwo}
+                        className="h-50 z-30 flex items-start justify-center rounded-lg object-cover shadow-lg md:h-[10rem]"
+                      />
                     </div>
                   </div>
                 </div>
 
                 <div className="relative">
                   <div className="group flex transition duration-500 hover:scale-95">
-                    {!ServicesOne ? (
-                      <div className="my-auto flex h-full w-full justify-center">
-                        <ImageSkeleton />
-                      </div>
-                    ) : (
-                      <Image
-                        alt="design"
-                        src={ServicesOne}
-                        className="z-30 flex h-60 rounded-lg object-cover shadow-lg md:h-[10rem]"
-                      />
-                    )}
+                    <Image
+                      alt="design"
+                      src={ServicesOne}
+                      className="z-30 flex h-60 rounded-lg object-cover shadow-lg md:h-[10rem]"
+                    />
+
                     <div className="absolute -left-2 -top-2 z-40 flex h-10 w-36 items-center justify-center rounded-lg bg-amber-300/90 shadow-lg transition duration-500 group-hover:-translate-x-1 group-hover:-translate-y-1">
                       <p className="text-md flex p-2 text-center font-bold text-zinc-900">
                         From concept..
@@ -145,17 +131,11 @@ export default function Services({ setSelectedPage }: Props) {
 
               <div className="relative">
                 <div className="group flex transition duration-500 hover:scale-95">
-                  {!ServicesFour ? (
-                    <div className="my-auto flex h-full w-full justify-center">
-                      <ImageSkeleton />
-                    </div>
-                  ) : (
-                    <Image
-                      alt="tooling"
-                      src={ServicesFour}
-                      className="z-30 flex h-60 rounded-lg object-cover shadow-lg md:h-[21.5rem]"
-                    />
-                  )}
+                  <Image
+                    alt="tooling"
+                    src={ServicesFour}
+                    className="z-30 flex h-60 rounded-lg object-cover shadow-lg md:h-[21.5rem]"
+                  />
                   <div className="absolute -right-2 -top-2 z-40 flex h-10 w-36 items-center justify-center rounded-lg bg-amber-300/90 shadow-lg transition duration-500 group-hover:-translate-x-1 group-hover:translate-y-1">
                     <p className="text-md flex p-2 text-center font-bold text-zinc-900">
                       to production.

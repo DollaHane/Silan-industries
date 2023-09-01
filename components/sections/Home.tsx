@@ -23,18 +23,17 @@ export default function Home({ setSelectedPage }: Props) {
   return (
     <section
       id="home"
-      className="z-40 h-full w-full justify-center p-10 text-center md:text-left"
+      className="z-40 h-auto min-h-screen w-full justify-center p-10 text-center md:text-left"
     >
       {/* IMAGE & HEADER */}
       <motion.div
-        className="mt-28 grid h-auto min-h-screen w-full grid-cols-1 gap-4 md:grid-cols-2"
+        className="mt-20 md:mt-32 grid w-full grid-cols-1 gap-4 md:grid-cols-2"
         onViewportEnter={() => setSelectedPage(SelectedPage.Home)}
       >
         {/* HEADER / LEFT SIDE */}
-        <div className="mb-8 w-full p-2">
+        <div className="mx-auto mb-8 h-full w-full">
           {/* HEADING LOGO & SLOGAN */}
           <motion.div
-            className="h-auto"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.5 }}
@@ -96,25 +95,12 @@ export default function Home({ setSelectedPage }: Props) {
               </Button>
             </AnchorLink>
           </motion.div>
-
-          {/* HEADING LOGO & SLOGAN */}
-          <motion.div
-            className="h-auto"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.5 }}
-            transition={{ duration: 0.5 }}
-            variants={{
-              hidden: { opacity: 0, x: -50 },
-              visible: { opacity: 1, x: 0 },
-            }}
-          ></motion.div>
         </div>
 
         {/* IMAGE / RIGHT SIDE */}
-        <div className="w-full p-4">
+        <div className="w-full">
           <motion.div
-            className="w-8/9 align-center relative mx-auto justify-center"
+            className="w-full flex align-center relative mx-auto justify-center"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.5 }}
@@ -125,12 +111,12 @@ export default function Home({ setSelectedPage }: Props) {
             }}
           >
             <Image
-              className="relative z-40"
+              className="relative mx-auto w-8/12 md:w-10/12 z-40 max-w-[70vw]"
               alt="home-pageGraphic"
               src={Model}
             />
             <Image
-              className="absolute right-10 top-10 z-30 rotate-6"
+              className="absolute w-8/12 md:w-10/12 mx-auto top-10 z-30 rotate-6 max-w-[50vw]"
               alt="home-pageGraphic"
               src={Graphic}
             />

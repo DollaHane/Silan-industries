@@ -9,6 +9,7 @@ import { useForm } from "react-hook-form"
 // COMPONENT Imports
 import { SelectedPage } from "@/types/types"
 
+import Footer from "../Footer"
 import PigeonMap from "../PigeonMap"
 import { Button } from "../ui/button"
 
@@ -33,15 +34,14 @@ export default function ContactUs({ setSelectedPage }: Props) {
   return (
     <section
       id="contactus"
-      className="z-40 mx-auto mb-44 flex h-screen w-full p-10"
+      className="z-40 mx-auto h-auto min-h-screen w-full p-10 bg-slate-400/10"
     >
       <motion.div
         onViewportEnter={() => setSelectedPage(SelectedPage.ContactUs)}
-        className="mx-auto mt-20 w-full"
+        className="mx-auto mt-20 h-auto w-full"
       >
         {/* HEADER */}
         <motion.div
-          className="p-2"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
@@ -51,7 +51,7 @@ export default function ContactUs({ setSelectedPage }: Props) {
             visible: { opacity: 1, x: 0 },
           }}
         >
-          <h1 className="my-5 font-prompt text-3xl font-bold">Contact:</h1>
+          <h1 className="mb-5 font-prompt text-3xl font-bold">Contact:</h1>
           <p className="text-sm md:text-base">
             For any queries, or to book a consulation, please do not hesitate to
             contact us by completing the form below. We would really appreciate
@@ -155,6 +155,64 @@ export default function ContactUs({ setSelectedPage }: Props) {
             <div className="w-full p-5">
               <div className="h-[282px] w-full overflow-hidden rounded-lg shadow-lg">
                 <PigeonMap />
+              </div>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* CONTACT DETAILS */}
+        <div className="mt-5 grid w-full grid-cols-1 px-5 md:grid-cols-2 text-sm">
+          {/* LEFT */}
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ delay: 0.2, duration: 0.5 }}
+            variants={{
+              hidden: { opacity: 0, y: 50 },
+              visible: { opacity: 1, y: 0 },
+            }}
+          >
+            <div className="mb-5 w-full grid grid-cols-1 gap-3">
+              <div className="flex gap-5">
+                <p className="w-32 font-semibold italic">General Manager:</p>
+                <p>Michael Hübsch</p>
+              </div>
+              <div className="flex gap-5">
+                <p className="w-32 font-semibold italic">Cell:</p>
+                <p>+27 (0) 78 366 2886</p>
+              </div>
+              <div className="flex gap-5">
+                <p className="w-32 font-semibold italic">Email:</p>
+                <p>michael@silan.co.za</p>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* RIGHT */}
+          <motion.div
+            className="md:pl-5"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ delay: 0.2, duration: 0.5 }}
+            variants={{
+              hidden: { opacity: 0, y: 50 },
+              visible: { opacity: 1, y: 0 },
+            }}
+          >
+            <div className="mb-5 w-full grid grid-cols-1 gap-3">
+              <div className="flex gap-5">
+                <p className="w-32 font-semibold italic">Address:</p>
+                <p>Portion 1 | Plot 68 | Farm 23</p>
+              </div>
+              <div className="flex gap-5">
+                <p className="w-32 font-semibold italic"></p>
+                <p>Kragga Kamma</p>
+              </div>
+              <div className="flex gap-5">
+                <p className="w-32 font-semibold italic"></p>
+                <p>Gqeberha</p>
               </div>
             </div>
           </motion.div>
