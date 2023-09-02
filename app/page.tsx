@@ -3,12 +3,12 @@
 import React, { useEffect, useState } from "react"
 
 import { SelectedPage } from "@/types/types"
+import Footer from "@/components/Footer"
 import ContactUs from "@/components/sections/ContactUs"
 import Home from "@/components/sections/Home"
 import Navbar from "@/components/sections/NavBar"
 import Projects from "@/components/sections/Projects"
 import Services from "@/components/sections/Services"
-import Footer from "@/components/Footer"
 
 export default function IndexPage() {
   const [selectedPage, setSelectedPage] = useState<SelectedPage>(
@@ -40,7 +40,7 @@ export default function IndexPage() {
         <Services setSelectedPage={setSelectedPage} />
         <Projects setSelectedPage={setSelectedPage} />
         <ContactUs setSelectedPage={setSelectedPage} />
-        <Footer/>
+        <Footer />
       </div>
     </div>
   )

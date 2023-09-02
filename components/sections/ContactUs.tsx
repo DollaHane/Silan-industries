@@ -34,12 +34,15 @@ export default function ContactUs({ setSelectedPage }: Props) {
   return (
     <section
       id="contactus"
-      className="z-40 mx-auto h-auto min-h-screen w-full bg-slate-400/10 p-10"
+      className="z-40 mx-auto h-auto min-h-screen w-full bg-slate-400/10 p-5 md:p-10"
     >
       <motion.div
         onViewportEnter={() => setSelectedPage(SelectedPage.ContactUs)}
-        className="mx-auto mt-20 h-auto w-full"
+        className="mx-auto mt-16 h-auto w-full"
       >
+        <h1 className="mb-5 font-prompt text-2xl font-bold md:text-3xl">
+          Contact:
+        </h1>
         {/* HEADER */}
         <motion.div
           initial="hidden"
@@ -47,11 +50,10 @@ export default function ContactUs({ setSelectedPage }: Props) {
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.5 }}
           variants={{
-            hidden: { opacity: 0, x: -50 },
-            visible: { opacity: 1, x: 0 },
+            hidden: { opacity: 0, y: -50 },
+            visible: { opacity: 1, y: 0 },
           }}
         >
-          <h1 className="mb-5 font-prompt text-3xl font-bold">Contact:</h1>
           <p className="text-sm md:text-base">
             For any queries, or to book a consulation, please do not hesitate to
             contact us by completing the form below. We would really appreciate
@@ -67,8 +69,8 @@ export default function ContactUs({ setSelectedPage }: Props) {
             viewport={{ once: true, amount: 0.5 }}
             transition={{ duration: 0.5 }}
             variants={{
-              hidden: { opacity: 0, y: 50 },
-              visible: { opacity: 1, y: 0 },
+              hidden: { opacity: 0, x: -50 },
+              visible: { opacity: 1, x: 0 },
             }}
           >
             <form
@@ -146,10 +148,10 @@ export default function ContactUs({ setSelectedPage }: Props) {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.5 }}
-            transition={{ delay: 0.2, duration: 0.5 }}
+            transition={{ duration: 0.5 }}
             variants={{
-              hidden: { opacity: 0, y: 50 },
-              visible: { opacity: 1, y: 0 },
+              hidden: { opacity: 0, x: 50 },
+              visible: { opacity: 1, x: 0 },
             }}
           >
             <div className="w-full p-5">
@@ -167,23 +169,23 @@ export default function ContactUs({ setSelectedPage }: Props) {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.5 }}
-            transition={{ delay: 0.2, duration: 0.5 }}
+            transition={{ duration: 0.5 }}
             variants={{
               hidden: { opacity: 0, y: 50 },
               visible: { opacity: 1, y: 0 },
             }}
           >
             <div className="mb-5 grid w-full grid-cols-1 gap-3">
-              <div className="flex gap-5">
-                <p className="w-32 font-semibold italic">General Manager:</p>
+              <div className="flex flex-wrap">
+                <p className="w-20 font-semibold italic">Contact:</p>
                 <p>Michael Hübsch</p>
               </div>
-              <div className="flex gap-5">
-                <p className="w-32 font-semibold italic">Cell:</p>
+              <div className="flex flex-wrap">
+                <p className="w-20 font-semibold italic">Cell:</p>
                 <p>+27 (0) 78 366 2886</p>
               </div>
-              <div className="flex gap-5">
-                <p className="w-32 font-semibold italic">Email:</p>
+              <div className="flex flex-wrap">
+                <p className="w-20 font-semibold italic">Email:</p>
                 <p>michael@silan.co.za</p>
               </div>
             </div>
@@ -195,24 +197,21 @@ export default function ContactUs({ setSelectedPage }: Props) {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.5 }}
-            transition={{ delay: 0.2, duration: 0.5 }}
+            transition={{ duration: 0.5 }}
             variants={{
               hidden: { opacity: 0, y: 50 },
               visible: { opacity: 1, y: 0 },
             }}
           >
             <div className="mb-5 grid w-full grid-cols-1 gap-3">
-              <div className="flex gap-5">
-                <p className="w-32 font-semibold italic">Address:</p>
+              <div className="flex flex-wrap">
+                <p className="w-20 font-semibold italic">Address:</p>
+              </div>
+              <div className="flex flex-wrap">
                 <p>Portion 1 | Plot 68 | Farm 23</p>
               </div>
-              <div className="flex gap-5">
-                <p className="w-32 font-semibold italic"></p>
-                <p>Kragga Kamma</p>
-              </div>
-              <div className="flex gap-5">
-                <p className="w-32 font-semibold italic"></p>
-                <p>Gqeberha</p>
+              <div className="flex flex-wrap">
+                <p>Kragga Kamma | Gqeberha</p>
               </div>
             </div>
           </motion.div>

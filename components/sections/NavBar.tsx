@@ -68,8 +68,6 @@ export default function Navbar({
                   setSelectedPage={setSelectedPage}
                 />
               </div>
-
-              <ThemeToggle />
             </div>
           ) : (
             <div className="flex h-full w-full items-center justify-end">
@@ -121,7 +119,6 @@ export default function Navbar({
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
               />
-              <ThemeToggle />
             </div>
           </div>
         </div>

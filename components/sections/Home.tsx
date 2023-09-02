@@ -39,8 +39,8 @@ export default function Home({ setSelectedPage }: Props) {
             viewport={{ once: true, amount: 0.5 }}
             transition={{ duration: 0.5 }}
             variants={{
-              hidden: { opacity: 0, x: -50 },
-              visible: { opacity: 1, x: 0 },
+              hidden: { opacity: 0, y: -50 },
+              visible: { opacity: 1, y: 0 },
             }}
           >
             {/* MAIN HEADING */}
@@ -77,10 +77,10 @@ export default function Home({ setSelectedPage }: Props) {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.5 }}
-            transition={{ delay: 0.2, duration: 0.5 }}
+            transition={{ duration: 0.5 }}
             variants={{
-              hidden: { opacity: 0, x: -50 },
-              visible: { opacity: 1, x: 0 },
+              hidden: { opacity: 0, y: -50 },
+              visible: { opacity: 1, y: 0 },
             }}
           >
             <AnchorLink
@@ -91,7 +91,7 @@ export default function Home({ setSelectedPage }: Props) {
                 variant="outline"
                 className="bg-amber-300 font-bold text-zinc-800 shadow-md hover:bg-slate-200"
               >
-                LETS CONNECT
+                LET'S CONNECT
               </Button>
             </AnchorLink>
           </motion.div>
@@ -100,14 +100,14 @@ export default function Home({ setSelectedPage }: Props) {
         {/* IMAGE / RIGHT SIDE */}
         <div className="w-full">
           <motion.div
-            className="align-center relative mx-auto flex w-full justify-center"
+            className="align-center relative -top-10 mx-auto flex w-full justify-center"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.5 }}
             transition={{ delay: 0.2, duration: 0.5 }}
             variants={{
-              hidden: { opacity: 0, x: -50 },
-              visible: { opacity: 1, x: 0 },
+              hidden: { opacity: 0, y: 50 },
+              visible: { opacity: 1, y: 0 },
             }}
           >
             <Image
