@@ -163,7 +163,7 @@ export default function ContactUs({ setSelectedPage }: Props) {
         </div>
 
         {/* CONTACT DETAILS */}
-        <div className="mt-5 grid w-full grid-cols-1 px-5 text-sm md:grid-cols-2">
+        <div className="mt-5 grid w-full grid-cols-1 overflow-hidden px-5 text-sm md:grid-cols-2">
           {/* LEFT */}
           <motion.div
             initial="hidden"
