@@ -10,7 +10,6 @@ import ServicesFive from "../assets/ServicesFive.jpeg"
 import ServicesFour from "../assets/ServicesFour.jpeg"
 import ServicesOne from "../assets/ServicesOne.jpeg"
 import ServicesTwo from "../assets/ServicesTwo.jpeg"
-import ImageSkeleton from "../ui/ImageSkeleton"
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void

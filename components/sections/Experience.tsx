@@ -10,26 +10,39 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"
 import { SelectedPage } from "@/types/types"
 import { cards } from "@/lib/data"
 
-// IMAGE Imports
-import ImageSkeleton from "../ui/ImageSkeleton"
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void
 }
 
-export default function Projects({ setSelectedPage }: Props) {
+export default function Experience({ setSelectedPage }: Props) {
   return (
     <section
-      id="projects"
-      className="z-40 mx-auto flex h-[100vh] w-full p-5 md:p-10"
+      id="experience"
+      className="z-40 mx-auto flex h-auto min-h-screen w-full p-5 md:p-10"
     >
       <motion.div
-        onViewportEnter={() => setSelectedPage(SelectedPage.Projects)}
+        onViewportEnter={() => setSelectedPage(SelectedPage.Experience)}
         className="mx-auto mt-16 h-auto w-full"
       >
         <h1 className="mb-5 font-prompt text-2xl font-bold md:text-3xl">
-          Projects:
+          Experience:
         </h1>
+        {/* HEADER */}
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.5 }}
+          variants={{
+            hidden: { opacity: 0, y: -50 },
+            visible: { opacity: 1, y: 0 },
+          }}
+        >
+          <p className="text-sm md:text-base">
+            With more than 20 years experience in designing tooling and special purpose equipment in the automotive industry, we are capable of delivering a wide variety of engineering solutions to suite your individual needs. From small manual processes, to larger more complex automated systems that require that extra touch.
+          </p>
+        </motion.div>
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -71,27 +84,31 @@ export default function Projects({ setSelectedPage }: Props) {
             {cards.map((card) => (
               <div className="w-full justify-center">
                 <div className="mx-auto flex w-full flex-wrap content-center justify-center gap-5 rounded-lg p-10">
-                  <div className="w-6/12 min-w-[200px] transition duration-500 hover:scale-95 md:min-w-[350px]">
+                  <div className="w-6/12 min-w-[230px] transition duration-500 hover:scale-95 md:min-w-[350px]">
                     {
                       <Image
-                        className="max-h-80 w-full rounded-2xl object-cover shadow-lg "
+                        className="max-h-[350px] min-h-[260px] w-full rounded-2xl object-cover shadow-lg "
                         alt={card.title}
                         src={card.image}
                       />
                     }
                   </div>
-                  <div className="h-full w-4/12 min-w-[200px] rounded-2xl bg-slate-200/20 px-3 shadow-lg">
+                  <div className="h-full w-4/12 min-w-[230px] rounded-2xl bg-slate-200/20 px-3 shadow-lg">
                     <h1 className="mt-5 w-full text-left font-extrabold md:text-xl">
                       {card.title}
                     </h1>
-                    <p className="md:text-md my-5 text-start text-sm">
+                    <p className=" my-5 text-start text-sm">
                       {card.paragraph}
                     </p>
-                    <ul className="md:text-md my-5 text-start text-sm">
+                    <ul className="my-5 text-start text-sm">
                       {card.list.map((item: any, index: any) => (
-                        <li key={index} className="flex gap-3">
-                          <ChevronsRight />
-                          <p>{item.para}</p>
+                        <li key={index} className="w-full flex my-1 justify-center">
+                          
+                            <ChevronsRight className="w-5 h-5 md:pt-1 mr-1" />
+                          
+                          <div className="w-full">
+                            <p>{item.para}</p>
+                          </div>
                         </li>
                       ))}
                     </ul>

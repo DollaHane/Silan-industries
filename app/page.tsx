@@ -7,7 +7,7 @@ import Footer from "@/components/Footer"
 import ContactUs from "@/components/sections/ContactUs"
 import Home from "@/components/sections/Home"
 import Navbar from "@/components/sections/NavBar"
-import Projects from "@/components/sections/Projects"
+import Experience from "@/components/sections/Experience"
 import Services from "@/components/sections/Services"
 
 export default function IndexPage() {
@@ -38,7 +38,7 @@ export default function IndexPage() {
         />
         <Home setSelectedPage={setSelectedPage} />
         <Services setSelectedPage={setSelectedPage} />
-        <Projects setSelectedPage={setSelectedPage} />
+        <Experience setSelectedPage={setSelectedPage} />
         <ContactUs setSelectedPage={setSelectedPage} />
         <Footer />
       </div>

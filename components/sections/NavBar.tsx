@@ -5,16 +5,13 @@ import React, { useState } from "react"
 import Image from "next/image"
 // NEED TWO ICONS
 import { Menu, X } from "lucide-react"
-import { useTheme } from "next-themes"
 
 // MISC Imports
 import { SelectedPage } from "@/types/types"
 import useMediaQuery from "@/hooks/useMediaQuery"
 
-import LogoDark from "../assets/Silan Logo Dark.png"
 import LogoWhite from "../assets/Silan Logo White.png"
 import Link from "../NavBarLink"
-import { ThemeToggle } from "../theme/theme-toggle"
 
 type Props = {
   isTopOfPage: boolean
@@ -29,18 +26,15 @@ export default function Navbar({
 }: Props): React.JSX.Element {
   const [isMenuToggled, setIsMenuToggled] = useState<boolean>(false)
   const isAboveMediumScreens = useMediaQuery("(min-width: 786px)")
-  const { theme } = useTheme()
 
   return (
     <nav className="fixed z-50 w-full">
       <div className="flex h-20 w-full border-b p-4 backdrop-blur-md">
         <div className="flex w-full">
           {/* LEFT SIDE */}
-          {theme !== "light" ? (
+          
             <Image alt="logo" src={LogoWhite} className="w-28" />
-          ) : (
-            <Image alt="logo" src={LogoDark} className="w-28" />
-          )}
+          
 
           {/* RIGHT SIDE */}
           {isAboveMediumScreens ? (
@@ -58,7 +52,7 @@ export default function Navbar({
                   setSelectedPage={setSelectedPage}
                 />
                 <Link
-                  page="Projects"
+                  page="Experience"
                   selectedPage={selectedPage}
                   setSelectedPage={setSelectedPage}
                 />
@@ -110,7 +104,7 @@ export default function Navbar({
                 setSelectedPage={setSelectedPage}
               />
               <Link
-                page="Projects"
+                page="Experience"
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
               />
