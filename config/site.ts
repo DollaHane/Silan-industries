@@ -1,9 +1,9 @@
 export type SiteConfig = typeof siteConfig
 
 export const siteConfig = {
-  name: "Next.js",
+  name: "Silan Industries Pty (Ltd)",
   description:
-    "Beautifully designed components built with Radix UI and Tailwind CSS.",
+    "Spacialists in the design of automotive assembly systems, robotic applications and special purpose tooling.",
   mainNav: [
     {
       title: "Home",
