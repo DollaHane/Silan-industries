@@ -30,7 +30,7 @@ export default function Services({ setSelectedPage }: Props) {
         </h1>
         <div className=" grid grid-cols-1">
           {/* SERVICES */}
-          <div className="mb-5 grid grid-cols-1 gap-5 text-center md:grid-cols-4 md:text-left">
+          <div className="mb-8 grid grid-cols-1 gap-8 text-center md:grid-cols-3 md:text-left">
             <motion.div
               className=""
               initial="hidden"
@@ -44,9 +44,14 @@ export default function Services({ setSelectedPage }: Props) {
             >
               <h1 className="mb-2 text-lg font-bold">Process & CAD Design:</h1>
               <p className="mb-5">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                cursus tortor sed lectus lacinia, sed sagittis nunc blandit.
-                Morbi luctus, leo vitae ullamcorper tincidunt.
+              With proficiencies in Siemens NX Unigraphics and Dassault SolidWorks, 
+              we offer 3D CAD Design, 2D Documentation as well as Process Design for a wide variety of 
+              automotive engineering solutions including assembly, welding and checking fixtures. 
+              </p>
+              <p>
+                We are also able to conceptualise equipment processes and budgets during the tendering phase 
+                of your project to better assist your team and help them achieve a competitive 
+                agreement with your customers.
               </p>
             </motion.div>
             <motion.div
@@ -62,28 +67,17 @@ export default function Services({ setSelectedPage }: Props) {
             >
               <h1 className="mb-2 text-lg font-bold">Project Management:</h1>
               <p className="mb-5">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                cursus tortor sed lectus lacinia, sed sagittis nunc blandit.
-                Morbi luctus, leo vitae ullamcorper tincidunt.
+                Our project management service covers your project from budgeting to final realisation.
+                This includes the overseeing of the following aspects of any given project.
               </p>
-            </motion.div>
-            <motion.div
-              className=""
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.5 }}
-              transition={{ delay: 0.4, duration: 0.5 }}
-              variants={{
-                hidden: { opacity: 0, x: 50 },
-                visible: { opacity: 1, x: 0 },
-              }}
-            >
-              <h1 className="mb-2 text-lg font-bold">Measuring:</h1>
-              <p className="mb-5">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                cursus tortor sed lectus lacinia, sed sagittis nunc blandit.
-                Morbi luctus, leo vitae ullamcorper tincidunt.
-              </p>
+              <ul className="text-left text-sm">
+                <li>Drafting and finalising project specifications.</li>
+                <li>CAPEX Budgeting.</li>
+                <li>Procurement & managing of sub-contractors.</li>
+                <li>Monitoring the project timing plan.</li>
+                <li>Generating weekly status reports.</li>
+                <li>Equipment buyoff as per customer standards.</li>
+              </ul>
             </motion.div>
             <motion.div
               className=""
@@ -100,10 +94,18 @@ export default function Services({ setSelectedPage }: Props) {
                 Manufacturing & Automation:
               </h1>
               <p className="mb-5">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                cursus tortor sed lectus lacinia, sed sagittis nunc blandit.
-                Morbi luctus, leo vitae ullamcorper tincidunt.
+                We have built strong relationships with a number of highly experienced local manufacturing & 
+                automation partners that support us with the following:
               </p>
+              <ul className="text-left text-sm">
+                <li>Robot Simulation.</li>
+                <li>Fabrication, Conventional & CNC Machining.</li>
+                <li>Assembly & Measuring.</li>
+                <li>Onsite Pre-acceptance.</li>
+                <li>Installation & Commissioning.</li>
+                <li>Electrical Design, Panel Build & PLC Programming</li>
+                <li>Training & Production Support</li>
+              </ul>
             </motion.div>
           </div>
 

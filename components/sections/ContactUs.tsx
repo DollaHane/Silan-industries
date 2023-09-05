@@ -176,18 +176,7 @@ export default function ContactUs({ setSelectedPage }: Props) {
             }}
           >
             <div className="mb-5 grid w-full grid-cols-1 gap-3">
-              <div className="flex flex-wrap">
-                <p className="w-20 font-semibold italic">Contact:</p>
-                <p>Michael Hübsch</p>
-              </div>
-              <div className="flex flex-wrap">
-                <p className="w-20 font-semibold italic">Cell:</p>
-                <p>+27 (0) 78 366 2886</p>
-              </div>
-              <div className="flex flex-wrap">
-                <p className="w-20 font-semibold italic">Email:</p>
-                <p>michael@silan.co.za</p>
-              </div>
+              
             </div>
           </motion.div>
 
@@ -204,6 +193,18 @@ export default function ContactUs({ setSelectedPage }: Props) {
             }}
           >
             <div className="mb-5 grid w-full grid-cols-1 gap-3">
+            <div className="flex flex-wrap">
+                <p className="w-20 font-semibold italic">Contact:</p>
+                <p>Michael Hübsch</p>
+              </div>
+              <div className="flex flex-wrap">
+                <p className="w-20 font-semibold italic">Cell:</p>
+                <p>+27 (0) 78 366 2886</p>
+              </div>
+              <div className="flex flex-wrap">
+                <p className="w-20 font-semibold italic">Email:</p>
+                <p>michael@silan.co.za</p>
+              </div>
               <div className="flex flex-wrap">
                 <p className="w-20 font-semibold italic">Address:</p>
               </div>
