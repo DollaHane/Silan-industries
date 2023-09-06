@@ -211,7 +211,7 @@ export default function ContactUs({ setSelectedPage }: Props) {
                         />
                       </FormControl>
                       <FormDescription className="italic text-primary">
-                        We're looking forward to hearing from you.
+                        We are looking forward to hearing from you.
                       </FormDescription>
                       <FormMessage />
                     </FormItem>
