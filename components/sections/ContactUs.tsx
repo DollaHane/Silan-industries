@@ -56,9 +56,9 @@ export default function ContactUs({ setSelectedPage }: Props) {
     message,
   }: FormCreationRequest) {
     const data = {
-      service_id: process.env.EMAILJS_SERVICE_ID,
-      template_id: process.env.EMAILJS_TEMPLATE_ID,
-      user_id: process.env.EMAILJS_PUBLIC_KEY,
+      service_id: 'service_nwxafir',
+      template_id: 'template_rmsb1fd',
+      user_id: 'MFnqY65qneeSi6YL0',
       template_params: {
         from_name: from_name,
         from_surname: from_surname,
@@ -222,7 +222,7 @@ export default function ContactUs({ setSelectedPage }: Props) {
                   variant="outline"
                   className="w-32 font-bold"
                 >
-                  CONNECT
+                  SEND
                 </Button>
               </form>
             </Form>
