@@ -1,33 +1,88 @@
 "use client"
 
-// REACT & TOOLS Imports
-import React from "react"
+import React, { useState } from "react"
+import { zodResolver } from "@hookform/resolvers/zod"
+import axios from "axios"
 import { motion } from "framer-motion"
-// MUI & TOOLS Imports
 import { useForm } from "react-hook-form"
-
-// COMPONENT Imports
+import { z } from "zod"
+import { useRouter } from "next/navigation"
 import { SelectedPage } from "@/types/types"
+import { FormCreationRequest, FormValidator } from "@/lib/validators/emailJs"
+import { toast } from "@/hooks/use-toast"
+import {
+  Form,
+  FormControl,
+  FormDescription,
+  FormField,
+  FormItem,
+  FormMessage,
+} from "@/components/ui/Form"
+import { Input } from "@/components/ui/Input"
 
-import Footer from "../Footer"
 import PigeonMap from "../PigeonMap"
 import { Button } from "../ui/button"
+import { Textarea } from "../ui/TextArea"
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void
 }
 
-export default function ContactUs({ setSelectedPage }: Props) {
-  const {
-    register,
-    trigger,
-    formState: { errors },
-  } = useForm()
+type FormData = z.infer<typeof FormValidator>
 
-  const onSubmit = async (event: any) => {
-    const isValid = await trigger()
-    if (!isValid) {
-      event.preventDefault()
+const dotenv = require("dotenv")
+dotenv.config()
+
+export default function ContactUs({ setSelectedPage }: Props) {
+
+  const router = useRouter()
+
+  const form = useForm<FormData>({
+    resolver: zodResolver(FormValidator),
+    defaultValues: {
+      from_name: "",
+      from_surname: "",
+      user_email: "",
+      subject: "",
+      message: "",
+    },
+  })
+
+  function onSubmit({
+    from_name,
+    from_surname,
+    user_email,
+    subject,
+    message,
+  }: FormCreationRequest) {
+    const data = {
+      service_id: process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+      template_id: process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+      user_id: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY,
+      template_params: {
+        from_name: from_name,
+        from_surname: from_surname,
+        user_email: user_email,
+        subject: subject,
+        message: message,
+      },
+    }
+
+    try {
+      axios
+        .post("https://api.emailjs.com/api/v1.0/email/send", data)
+        .then(() => {
+          return toast({
+            description: "Your email has been sent successfully!",
+          })
+        })
+        router.refresh()
+    } catch (error) {
+      return toast({
+        title: "Something went wrong.",
+        description: `Email not sent: ${error}. Please try again.`,
+        variant: "destructive",
+      })
     }
   }
 
@@ -61,7 +116,7 @@ export default function ContactUs({ setSelectedPage }: Props) {
           </p>
         </motion.div>
 
-        {/* FORM & IMAGE */}
+        {/* ---------- FORM ---------- */}
         <div className="mt-5 grid grid-cols-1 md:grid-cols-2">
           <motion.div
             initial="hidden"
@@ -73,76 +128,107 @@ export default function ContactUs({ setSelectedPage }: Props) {
               visible: { opacity: 1, x: 0 },
             }}
           >
-            <form
-              className="grid grid-cols-1 gap-4 p-5"
-              target="_blank"
-              onSubmit={onSubmit}
-              action="https://formsubmit.co/e8a5bdfa807605332f809e5656e27c6e"
-              method="POST"
-            >
-              <input
-                id="name"
-                className="rounded border border-slate-400 bg-transparent p-2 text-sm text-zinc-800 shadow-md"
-                type="text"
-                placeholder="Full Name"
-                {...register("name", {
-                  required: true,
-                  maxLength: 100,
-                })}
-              />
-              {errors.name && (
-                <p className="">
-                  {errors.name.type === "required" && "This field is required."}
-                  {errors.name.type === "maxLength" &&
-                    "Max length is 100 char."}
-                </p>
-              )}
-
-              <input
-                className="rounded border border-slate-400 bg-transparent p-2 text-sm text-zinc-800 shadow-md"
-                type="text"
-                id="email"
-                placeholder="Email"
-                {...register("email", {
-                  required: true,
-                  pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                })}
-              />
-              {errors.email && (
-                <p className="">
-                  {errors.email.type === "required" &&
-                    "This field is required."}
-                  {errors.email.type === "pattern" && "Invalid email address."}
-                </p>
-              )}
-
-              <textarea
-                className="rounded border border-slate-400 bg-transparent p-2 text-sm text-zinc-800 shadow-md"
-                placeholder="Message.."
-                rows={5}
-                {...register("message", {
-                  required: true,
-                  maxLength: 2000,
-                })}
-              />
-              {errors.message && (
-                <p className="">
-                  {errors.message.type === "required" &&
-                    "This field is required."}
-                  {errors.message.type === "maxLength" &&
-                    "Max length is 2000 char."}
-                </p>
-              )}
-
-              <Button
-                variant="outline"
-                className="border border-slate-400 font-bold shadow-md"
+            <Form {...form}>
+              <form
+                onSubmit={form.handleSubmit(onSubmit)}
+                className="space-y-5 p-5"
               >
-                SEND
-              </Button>
-            </form>
+                <div className="grid grid-cols-2 gap-5">
+                  <FormField
+                    control={form.control}
+                    name="from_name"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormControl>
+                          <Input
+                            placeholder="Name"
+                            type="text"
+                            {...field}
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  <FormField
+                    control={form.control}
+                    name="from_surname"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormControl>
+                          <Input
+                            placeholder="Surname"
+                            type="text"
+                            {...field}
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                </div>
+                <FormField
+                  control={form.control}
+                  name="user_email"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormControl>
+                        <Input
+                          placeholder="@"
+                          type="email"
+                          {...field}
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="subject"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormControl>
+                        <Input
+                          placeholder="Subject"
+                          type="text"
+                          {...field}
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="message"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormControl>
+                        <Textarea
+                          placeholder="Type your message here."
+                          {...field}
+                        />
+                      </FormControl>
+                      <FormDescription className="italic text-primary">
+                        We're looking forward to hearing from you.
+                      </FormDescription>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <Button
+                  type="submit"
+                  variant="outline"
+                  className="w-32 font-bold"
+                >
+                  CONNECT
+                </Button>
+              </form>
+            </Form>
           </motion.div>
 
+          {/* MAP */}
           <motion.div
             className=""
             initial="hidden"
@@ -155,7 +241,7 @@ export default function ContactUs({ setSelectedPage }: Props) {
             }}
           >
             <div className="w-full p-5">
-              <div className="h-[282px] w-full overflow-hidden rounded-lg shadow-lg">
+              <div className="h-[320px] w-full overflow-hidden rounded-lg shadow-lg">
                 <PigeonMap />
               </div>
             </div>
@@ -164,25 +250,8 @@ export default function ContactUs({ setSelectedPage }: Props) {
 
         {/* CONTACT DETAILS */}
         <div className="mt-5 grid w-full grid-cols-1 overflow-hidden px-5 text-sm md:grid-cols-2">
-          {/* LEFT */}
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.5 }}
-            transition={{ duration: 0.5 }}
-            variants={{
-              hidden: { opacity: 0, y: 50 },
-              visible: { opacity: 1, y: 0 },
-            }}
-          >
-            <div className="mb-5 grid w-full grid-cols-1 gap-3">
-              
-            </div>
-          </motion.div>
-
           {/* RIGHT */}
           <motion.div
-            className="md:pl-5"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.5 }}
@@ -193,7 +262,7 @@ export default function ContactUs({ setSelectedPage }: Props) {
             }}
           >
             <div className="mb-5 grid w-full grid-cols-1 gap-3">
-            <div className="flex flex-wrap">
+              <div className="flex flex-wrap">
                 <p className="w-20 font-semibold italic">Contact:</p>
                 <p>Michael Hübsch</p>
               </div>

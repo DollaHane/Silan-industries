@@ -5,7 +5,6 @@ import { useTheme } from "next-themes"
 
 export default function BackgroundColor() {
   const { theme } = useTheme()
-  console.log(theme)
 
   return (
     <div className="fixed">

@@ -10,7 +10,6 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"
 import { SelectedPage } from "@/types/types"
 import { cards } from "@/lib/data"
 
-
 type Props = {
   setSelectedPage: (value: SelectedPage) => void
 }
@@ -40,7 +39,11 @@ export default function Experience({ setSelectedPage }: Props) {
           }}
         >
           <p className="text-sm md:text-base">
-            With more than 20 years experience in designing tooling and special purpose equipment in the automotive industry, we are capable of delivering a wide variety of engineering solutions to suite your individual needs. From small manual processes, to larger more complex automated systems that require that extra touch.
+            With more than 20 years experience in designing tooling and special
+            purpose equipment in the automotive industry, we are capable of
+            delivering a wide variety of engineering solutions to suite your
+            individual needs. From small manual processes, to larger more
+            complex automated systems that require that extra touch.
           </p>
         </motion.div>
         <motion.div
@@ -82,7 +85,7 @@ export default function Experience({ setSelectedPage }: Props) {
             )}
           >
             {cards.map((card) => (
-              <div className="w-full justify-center">
+              <div className="w-full justify-center" key={card.title}>
                 <div className="mx-auto flex w-full flex-wrap content-center justify-center gap-5 rounded-lg p-10">
                   <div className="w-6/12 min-w-[230px] transition duration-500 hover:scale-95 md:min-w-[350px]">
                     {
@@ -97,15 +100,15 @@ export default function Experience({ setSelectedPage }: Props) {
                     <h1 className="mt-5 w-full text-left font-extrabold md:text-xl">
                       {card.title}
                     </h1>
-                    <p className=" my-5 text-start text-sm">
-                      {card.paragraph}
-                    </p>
+                    <p className=" my-5 text-start text-sm">{card.paragraph}</p>
                     <ul className="my-5 text-start text-sm">
                       {card.list.map((item: any, index: any) => (
-                        <li key={index} className="w-full flex my-1 justify-center">
-                          
-                            <ChevronsRight className="w-5 h-5 md:pt-1 mr-1" />
-                          
+                        <li
+                          key={index}
+                          className="my-1 flex w-full justify-center"
+                        >
+                          <ChevronsRight className="mr-1 h-5 w-5 md:pt-1" />
+
                           <div className="w-full">
                             <p>{item.para}</p>
                           </div>

@@ -16,8 +16,15 @@
   "dependencies": {
     "@cloudinary/react": "^1.11.2",
     "@cloudinary/url-gen": "^1.11.2",
+    "@emailjs/browser": "^3.11.0",
     "@googlemaps/react-wrapper": "^1.1.35",
+    "@hookform/resolvers": "^3.3.1",
+    "@radix-ui/react-form": "^0.0.3",
+    "@radix-ui/react-label": "^2.0.2",
     "@radix-ui/react-slot": "^1.0.2",
+    "@radix-ui/react-toast": "^1.1.4",
+    "@tanstack/react-query": "^4.33.0",
+    "axios": "^1.5.0",
     "class-variance-authority": "^0.4.0",
     "clsx": "^1.2.1",
     "dotenv": "^16.3.1",
@@ -29,11 +36,12 @@
     "react": "^18.2.0",
     "react-anchor-link-smooth-scroll": "^1.0.12",
     "react-dom": "^18.2.0",
-    "react-hook-form": "^7.45.1",
+    "react-hook-form": "^7.46.1",
     "react-responsive-carousel": "^3.2.23",
     "sharp": "^0.31.3",
     "tailwind-merge": "^1.12.0",
-    "tailwindcss-animate": "^1.0.6"
+    "tailwindcss-animate": "^1.0.6",
+    "zod": "^3.22.2"
   },
   "devDependencies": {
     "@ianvs/prettier-plugin-sort-imports": "^4.1.0",

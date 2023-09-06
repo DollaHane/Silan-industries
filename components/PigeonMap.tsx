@@ -1,14 +1,17 @@
-"use client"
+
 
 import React, { useState } from "react"
 import { Map, Marker, ZoomControl } from "pigeon-maps"
 import { maptiler } from "pigeon-maps/providers"
 
 export default function PigeonMap() {
+  const dotenv = require("dotenv")
+dotenv.config()
+
   const [hue, setHue] = useState(355)
 
-  const apiKey = process.env.MY_API_KEY
-  const maptilerProvider = maptiler("MIKhojEDOxVHSfIx0O8y", "streets")
+  const apiKey = process.env.NEXT_PUBLIC_MY_API_KEY
+  const maptilerProvider = maptiler("1lqB0DjtRqeP7JzUHCPn", "streets")
   const color = `hsl(${hue % 360}deg 100% 45%)`
 
   return (
