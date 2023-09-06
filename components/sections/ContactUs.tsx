@@ -56,9 +56,9 @@ export default function ContactUs({ setSelectedPage }: Props) {
     message,
   }: FormCreationRequest) {
     const data = {
-      service_id: process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
-      template_id: process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
-      user_id: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY,
+      service_id: process.env.EMAILJS_SERVICE_ID,
+      template_id: process.env.EMAILJS_TEMPLATE_ID,
+      user_id: process.env.EMAILJS_PUBLIC_KEY,
       template_params: {
         from_name: from_name,
         from_surname: from_surname,
