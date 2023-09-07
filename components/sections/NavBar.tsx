@@ -25,16 +25,15 @@ export default function Navbar({
   setSelectedPage,
 }: Props): React.JSX.Element {
   const [isMenuToggled, setIsMenuToggled] = useState<boolean>(false)
-  const isAboveMediumScreens = useMediaQuery("(min-width: 786px)")
+  const isAboveMediumScreens = useMediaQuery("(min-width: 768px)")
 
   return (
     <nav className="fixed z-50 w-full">
       <div className="flex h-20 w-full border-b p-4 backdrop-blur-md">
         <div className="flex w-full">
           {/* LEFT SIDE */}
-          
-            <Image alt="logo" src={LogoWhite} className="w-28" />
-          
+
+          <Image alt="logo" src={LogoWhite} className="w-28" />
 
           {/* RIGHT SIDE */}
           {isAboveMediumScreens ? (
@@ -79,8 +78,8 @@ export default function Navbar({
 
       {/* MOBILE MENU MODAL */}
       {!isAboveMediumScreens && isMenuToggled && (
-        <div className="absolute right-0 top-0 z-40 h-screen w-80">
-          <div className="z-40 flex h-full w-80 border-l p-4 backdrop-blur-md">
+        <div className="absolute right-0 top-0 z-40 h-screen w-full">
+          <div className="z-40 flex h-full w-full border-l p-4 backdrop-blur-md">
             {/* CLOSE ICON */}
             <div className="absolute right-0 top-0 p-8">
               <button

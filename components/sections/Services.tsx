@@ -44,14 +44,16 @@ export default function Services({ setSelectedPage }: Props) {
             >
               <h1 className="mb-2 text-lg font-bold">Process & CAD Design:</h1>
               <p className="mb-5">
-              With proficiencies in Siemens NX Unigraphics and Dassault SolidWorks, 
-              we offer 3D CAD Design, 2D Documentation as well as Process Design for a wide variety of 
-              automotive engineering solutions including assembly, welding and checking fixtures. 
+                With proficiencies in Siemens NX Unigraphics and Dassault
+                SolidWorks, we offer 3D CAD Design, 2D Documentation as well as
+                Process Design for a wide variety of automotive engineering
+                solutions including assembly, welding and checking fixtures.
               </p>
               <p>
-                We are also able to conceptualise equipment processes and budgets during the tendering phase 
-                of your project to better assist your team and help them achieve a competitive 
-                agreement with your customers.
+                We are also able to conceptualise equipment processes and
+                budgets during the tendering phase of your project to better
+                assist your team and help them achieve a competitive agreement
+                with your customers.
               </p>
             </motion.div>
             <motion.div
@@ -67,10 +69,11 @@ export default function Services({ setSelectedPage }: Props) {
             >
               <h1 className="mb-2 text-lg font-bold">Project Management:</h1>
               <p className="mb-5">
-                Our project management service covers your project from budgeting to final realisation.
-                This includes the overseeing of the following aspects of any given project.
+                Our project management service covers your project from
+                budgeting to final realisation. This includes the overseeing of
+                the following aspects of any given project.
               </p>
-              <ul className="text-left text-sm list-disc pl-5">
+              <ul className="list-disc pl-5 text-left text-sm">
                 <li>Drafting and finalising project specifications.</li>
                 <li>CAPEX Budgeting.</li>
                 <li>Procurement & managing of sub-contractors.</li>
@@ -94,10 +97,11 @@ export default function Services({ setSelectedPage }: Props) {
                 Manufacturing & Automation:
               </h1>
               <p className="mb-5">
-                We have built strong relationships with a number of highly experienced local manufacturing & 
-                automation partners that support us with the following:
+                We have built strong relationships with a number of highly
+                experienced local manufacturing & automation partners that
+                support us with the following:
               </p>
-              <ul className="text-left text-sm list-disc pl-5">
+              <ul className="list-disc pl-5 text-left text-sm">
                 <li>Robot Simulation.</li>
                 <li>Fabrication, Conventional & CNC Machining.</li>
                 <li>Assembly & Measuring.</li>
@@ -131,7 +135,7 @@ export default function Services({ setSelectedPage }: Props) {
                     className="z-30 flex h-20 rounded-lg object-cover shadow-lg md:h-[10rem]"
                   />
 
-                  <div className="absolute -left-2 -top-2 z-40 flex h-6 w-28 items-center justify-center rounded-lg bg-amber-300/90 shadow-lg transition duration-500 group-hover:-translate-x-1 group-hover:-translate-y-1 md:h-10 md:w-36">
+                  <div className="absolute -left-2 -top-2 z-40 flex h-6 w-32 items-center justify-center rounded-lg bg-amber-300/90 shadow-lg transition duration-500 group-hover:-translate-x-1 group-hover:-translate-y-1 md:h-10 md:w-36">
                     <p className="flex p-2 text-center text-xs font-bold text-zinc-900 md:text-base">
                       From concept..
                     </p>
@@ -198,7 +202,7 @@ export default function Services({ setSelectedPage }: Props) {
                   src={ServicesFour}
                   className="z-30 flex h-60 rounded-lg object-cover shadow-lg md:h-[21.5rem]"
                 />
-                <div className="absolute -right-2 -top-2 z-40 flex h-6 w-28 items-center justify-center rounded-lg bg-amber-300/90 shadow-lg transition duration-500 group-hover:-translate-x-1 group-hover:translate-y-1 md:h-10 md:w-36">
+                <div className="absolute -right-2 -top-2 z-40 flex h-6 w-32 items-center justify-center rounded-lg bg-amber-300/90 shadow-lg transition duration-500 group-hover:-translate-x-1 group-hover:translate-y-1 md:h-10 md:w-36">
                   <p className="flex p-2 text-center text-xs font-bold text-zinc-900 md:text-base">
                     to production.
                   </p>
