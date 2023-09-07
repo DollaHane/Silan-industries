@@ -91,7 +91,7 @@ export default function Home({ setSelectedPage }: Props) {
                 variant="outline"
                 className="bg-amber-300 font-bold text-zinc-800 shadow-md hover:bg-slate-200"
               >
-                LETS CONNECT
+                LET&apos;S CONNECT
               </Button>
             </AnchorLink>
           </motion.div>

@@ -19,14 +19,14 @@ export default function TermsAndConditions() {
         <p className="italic text-amber-400">Last updated September 05, 2023</p>
         <h1 className="text-lg font-bold">AGREEMENT TO OUR LEGAL TERMS</h1>
         <p>
-          We are Silan Industries Pty (Ltd) ('Company', 'we', 'us', or 'our'), a
+          We are Silan Industries Pty (Ltd) (&apos;Company&apos;, &apos;we&apos;, &apos;us&apos;, or &apos;our&apos;), a
           company registered in South Africa at 36 Neethling Close, Kunene Park,
           Port Elizabeth, East Cape 6025. Our VAT number is 4770293936.
         </p>
         <p>
-          We operate the website https://www.silan.co.za (the 'Site'), as well
+          We operate the website https://www.silan.co.za (the &apos;Site&apos;), as well
           as any other related products and services that refer or link to these
-          legal terms (the 'Legal Terms') (collectively, the 'Services').
+          legal terms (the &apos;Legal Terms&apos;) (collectively, the &apos;Services&apos;).
         </p>
         <p>
           You can contact us by phone at +27 (0)60 320 7122, email at
@@ -35,7 +35,7 @@ export default function TermsAndConditions() {
         </p>
         <p>
           These Legal Terms constitute a legally binding agreement made between
-          you, whether personally or on behalf of an entity ('you'), and Silan
+          you, whether personally or on behalf of an entity (&apos;you&apos;), and Silan
           Industries Pty (Ltd), concerning your access to and use of the
           Services. You agree that by accessing the Services, you have read,
           understood, and agreed to be bound by all of these Legal Terms. IF YOU
@@ -48,7 +48,7 @@ export default function TermsAndConditions() {
           the Services from time to time are hereby expressly incorporated
           herein by reference. We reserve the right, in our sole discretion, to
           make changes or modifications to these Legal Terms from time to time.
-          We will alert you about any changes by updating the 'Last updated'
+          We will alert you about any changes by updating the &apos;Last updated&apos;
           date of these Legal Terms, and you waive any right to receive specific
           notice of each such change. It is your responsibility to periodically
           review these Legal Terms to stay informed of updates. You will be
@@ -122,8 +122,8 @@ export default function TermsAndConditions() {
           We are the owner or the licensee of all intellectual property rights
           in our Services, including all source code, databases, functionality,
           software, website designs, audio, video, text, photographs, and
-          graphics in the Services (collectively, the 'Content'), as well as the
-          trademarks, service marks, and logos contained therein (the 'Marks').
+          graphics in the Services (collectively, the &apos;Content&apos;), as well as the
+          trademarks, service marks, and logos contained therein (the &apos;Marks&apos;).
         </p>
         <p>
           Our Content and Marks are protected by copyright and trademark laws
@@ -131,14 +131,14 @@ export default function TermsAndConditions() {
           laws) and treaties in the United States and around the world.
         </p>
         <p>
-          The Content and Marks are provided in or through the Services 'AS IS'
+          The Content and Marks are provided in or through the Services &apos;AS IS&apos;
           for your personal, non-commercial use or internal business purpose
           only.
         </p>
         <h1 className="font-semibold">Your use of our Services</h1>
         <p>
           Subject to your compliance with these Legal Terms, including the
-          'PROHIBITED ACTIVITIES' section below, we grant you a non-exclusive,
+          &apos;PROHIBITED ACTIVITIES&apos; section below, we grant you a non-exclusive,
           non-transferable, revocable licence to:
         </p>
         <ul className="list-disc pl-10">
@@ -181,7 +181,7 @@ export default function TermsAndConditions() {
         </p>
         <h1 className="font-semibold">Your submissions</h1>
         <p>
-          Please review this section and the 'PROHIBITED ACTIVITIES' section
+          Please review this section and the &apos;PROHIBITED ACTIVITIES&apos; section
           carefully prior to using our Services to understand the (a) rights you
           give us and (b) obligations you have when you post or upload any
           content through the Services.
@@ -189,7 +189,7 @@ export default function TermsAndConditions() {
         <p>
           Submissions: By directly sending us any question, comment, suggestion,
           idea, feedback, or other information about the Services
-          ('Submissions'), you agree to assign to us all intellectual property
+          (&apos;Submissions&apos;), you agree to assign to us all intellectual property
           rights in such Submission. You agree that we shall own this Submission
           and be entitled to its unrestricted use and dissemination for any
           lawful purpose, commercial or otherwise, without acknowledgment or
@@ -201,8 +201,8 @@ export default function TermsAndConditions() {
         </p>
         <ul className="list-disc pl-10">
           <li>
-            confirm that you have read and agree with our 'PROHIBITED
-            ACTIVITIES' and will not post, send, publish, upload, or transmit
+            confirm that you have read and agree with our &apos;PROHIBITED
+            ACTIVITIES&apos; and will not post, send, publish, upload, or transmit
             through the Services any Submission that is illegal, harassing,
             hateful, harmful, defamatory, obscene, bullying, abusive,
             discriminatory, threatening to any person or group, sexually
@@ -313,9 +313,9 @@ export default function TermsAndConditions() {
             Upload or transmit (or attempt to upload or to transmit) any
             material that acts as a passive or active information collection or
             transmission mechanism, including without limitation, clear graphics
-            interchange formats ('gifs'), 1×1 pixels, web bugs, cookies, or
-            other similar devices (sometimes referred to as 'spyware' or
-            'passive collection mechanisms' or 'pcms').
+            interchange formats (&apos;gifs&apos;), 1×1 pixels, web bugs, cookies, or
+            other similar devices (sometimes referred to as &apos;spyware&apos; or
+              &apos;passive collection mechanisms&apos; or &apos;pcms&apos;).
           </li>
           <li>
             Interfere with, disrupt, or create an undue burden on the Services
@@ -330,7 +330,7 @@ export default function TermsAndConditions() {
             or restrict access to the Services, or any portion of the Services.
           </li>
           <li>
-            Copy or adapt the Services' software, including but not limited to
+            Copy or adapt the Services&apos; software, including but not limited to
             Flash, PHP, HTML, JavaScript, or other code.
           </li>
           <li>
@@ -475,9 +475,9 @@ export default function TermsAndConditions() {
         <h1>Informal Negotiations</h1>
         <p>
           To expedite resolution and control the cost of any dispute,
-          controversy, or claim related to these Legal Terms (each a 'Dispute'
-          and collectively, the 'Disputes') brought by either you or us
-          (individually, a 'Party' and collectively, the 'Parties'), the Parties
+          controversy, or claim related to these Legal Terms (each a &apos;Dispute&apos;
+          and collectively, the &apos;Disputes&apos;) brought by either you or us
+          (individually, a &apos;Party&apos; and collectively, the &apos;Parties&apos;), the Parties
           agree to first attempt to negotiate any Dispute (except those Disputes
           expressly provided below) informally for at least thirty (30) days
           before initiating arbitration. Such informal negotiations commence
@@ -547,7 +547,7 @@ export default function TermsAndConditions() {
           INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF
           MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND
           NON-INFRINGEMENT. WE MAKE NO WARRANTIES OR REPRESENTATIONS ABOUT THE
-          ACCURACY OR COMPLETENESS OF THE SERVICES' CONTENT OR THE CONTENT OF
+          ACCURACY OR COMPLETENESS OF THE SERVICES&apos; CONTENT OR THE CONTENT OF
           ANY WEBSITES OR MOBILE APPLICATIONS LINKED TO THE SERVICES AND WE WILL
           ASSUME NO LIABILITY OR RESPONSIBILITY FOR ANY (1) ERRORS, MISTAKES, OR
           INACCURACIES OF CONTENT AND MATERIALS, (2) PERSONAL INJURY OR PROPERTY
