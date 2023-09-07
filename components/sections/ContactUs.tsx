@@ -1,12 +1,13 @@
 "use client"
 
-import React, { useState } from "react"
+import React from "react"
+import { useRouter } from "next/navigation"
 import { zodResolver } from "@hookform/resolvers/zod"
 import axios from "axios"
 import { motion } from "framer-motion"
 import { useForm } from "react-hook-form"
 import { z } from "zod"
-import { useRouter } from "next/navigation"
+
 import { SelectedPage } from "@/types/types"
 import { FormCreationRequest, FormValidator } from "@/lib/validators/emailJs"
 import { toast } from "@/hooks/use-toast"
@@ -34,7 +35,6 @@ const dotenv = require("dotenv")
 dotenv.config()
 
 export default function ContactUs({ setSelectedPage }: Props) {
-
   const router = useRouter()
 
   const form = useForm<FormData>({
@@ -56,9 +56,9 @@ export default function ContactUs({ setSelectedPage }: Props) {
     message,
   }: FormCreationRequest) {
     const data = {
-      service_id: 'service_nwxafir',
-      template_id: 'template_rmsb1fd',
-      user_id: 'MFnqY65qneeSi6YL0',
+      service_id: "service_nwxafir",
+      template_id: "template_rmsb1fd",
+      user_id: "MFnqY65qneeSi6YL0",
       template_params: {
         from_name: from_name,
         from_surname: from_surname,
@@ -76,7 +76,7 @@ export default function ContactUs({ setSelectedPage }: Props) {
             description: "Your email has been sent successfully!",
           })
         })
-        router.refresh()
+      router.refresh()
     } catch (error) {
       return toast({
         title: "Something went wrong.",
@@ -140,11 +140,7 @@ export default function ContactUs({ setSelectedPage }: Props) {
                     render={({ field }) => (
                       <FormItem>
                         <FormControl>
-                          <Input
-                            placeholder="Name"
-                            type="text"
-                            {...field}
-                          />
+                          <Input placeholder="Name" type="text" {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -156,11 +152,7 @@ export default function ContactUs({ setSelectedPage }: Props) {
                     render={({ field }) => (
                       <FormItem>
                         <FormControl>
-                          <Input
-                            placeholder="Surname"
-                            type="text"
-                            {...field}
-                          />
+                          <Input placeholder="Surname" type="text" {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -173,11 +165,7 @@ export default function ContactUs({ setSelectedPage }: Props) {
                   render={({ field }) => (
                     <FormItem>
                       <FormControl>
-                        <Input
-                          placeholder="@"
-                          type="email"
-                          {...field}
-                        />
+                        <Input placeholder="@" type="email" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -189,11 +177,7 @@ export default function ContactUs({ setSelectedPage }: Props) {
                   render={({ field }) => (
                     <FormItem>
                       <FormControl>
-                        <Input
-                          placeholder="Subject"
-                          type="text"
-                          {...field}
-                        />
+                        <Input placeholder="Subject" type="text" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>

@@ -7,7 +7,7 @@ export default function BackgroundColor() {
   const { theme } = useTheme()
 
   return (
-    <div className="fixed">
+    <div className="fixed z-10">
       {theme === "light" ? (
         <div>
           <div className="blob bg-opacity/60 absolute right-0 top-0 z-10 h-[400px] w-[400px] rounded-full bg-gradient-to-r from-colorOne via-colorTwo to-colorThr blur-3xl" />
