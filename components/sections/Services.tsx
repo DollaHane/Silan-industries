@@ -70,7 +70,7 @@ export default function Services({ setSelectedPage }: Props) {
                 Our project management service covers your project from budgeting to final realisation.
                 This includes the overseeing of the following aspects of any given project.
               </p>
-              <ul className="text-left text-sm">
+              <ul className="text-left text-sm list-disc pl-5">
                 <li>Drafting and finalising project specifications.</li>
                 <li>CAPEX Budgeting.</li>
                 <li>Procurement & managing of sub-contractors.</li>
@@ -97,7 +97,7 @@ export default function Services({ setSelectedPage }: Props) {
                 We have built strong relationships with a number of highly experienced local manufacturing & 
                 automation partners that support us with the following:
               </p>
-              <ul className="text-left text-sm">
+              <ul className="text-left text-sm list-disc pl-5">
                 <li>Robot Simulation.</li>
                 <li>Fabrication, Conventional & CNC Machining.</li>
                 <li>Assembly & Measuring.</li>
