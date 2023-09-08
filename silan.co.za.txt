@@ -1,0 +1,48 @@
+;;
+;; Domain:     silan.co.za.
+;; Exported:   2023-09-07 12:25:59
+;;
+;; This file is intended for use for informational and archival
+;; purposes ONLY and MUST be edited before use on a production
+;; DNS server.  In particular, you must:
+;;   -- update the SOA record with the correct authoritative name server
+;;   -- update the SOA record with the contact e-mail address information
+;;   -- update the NS record(s) with the authoritative name servers for this domain.
+;;
+;; For further information, please consult the BIND documentation
+;; located on the following website:
+;;
+;; http://www.isc.org/
+;;
+;; And RFC 1035:
+;;
+;; http://www.ietf.org/rfc/rfc1035.txt
+;;
+;; Please note that we do NOT offer technical support for any use
+;; of this zone data, the BIND name server, or any other third-party
+;; DNS software.
+;;
+;; Use at your own risk.
+;; SOA Record
+silan.co.za	3600	IN	SOA	gordon.ns.cloudflare.com dns.cloudflare.com 2044575615 10000 2400 604800 3600
+
+;; NS Records
+silan.co.za.	86400	IN	NS	gordon.ns.cloudflare.com.
+silan.co.za.	86400	IN	NS	jessica.ns.cloudflare.com.
+
+;; A Records
+silan.co.za.	1	IN	A	76.76.21.21
+
+;; CNAME Records
+3gnctlzww7au.silan.co.za.	1	IN	CNAME	gv-h5mdxvj2slikc4.dv.googlehosted.com.
+www.silan.co.za.	1	IN	CNAME	cname.vercel-dns.com.
+
+;; MX Records
+silan.co.za.	60	IN	MX	50 mx3.zoho.com.
+silan.co.za.	60	IN	MX	20 mx2.zoho.com.
+silan.co.za.	60	IN	MX	10 mx.zoho.com.
+
+;; TXT Records
+silan.co.za.	60	IN	TXT	"zoho-verification=zb78705667.zmverify.zoho.com"
+silan.co.za.	60	IN	TXT	"v=spf1 include:zoho.com ~all"
+zmail._domainkey.silan.co.za.	60	IN	TXT	"v=DKIM1; k=rsa; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDaKvB0kWZI/wEhGqYlcDf4kWSzblHq+hgvM0BrSMly01yDK9DAOwvRr7mIBXIWLioQM+1lXzXQjDOzl1kbzXr+Kg4dm9co8iDx3bHnmw7JAzKeozY4BGO0coIF3ZooNrDSQjboVYRdg4l7pe4G7KxSUBDEs2zCZUEGAGOE4k3EgQIDAQAB"
