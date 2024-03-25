@@ -3,7 +3,7 @@ export type SiteConfig = typeof siteConfig
 export const siteConfig = {
   name: "Silan Industries Pty (Ltd)",
   description:
-    "Spacialists in the design of automotive assembly systems, robotic applications and special purpose tooling.",
+    "A level 1 B-BBEE engineering company specialising in the design of automated production systems, robotic applications and special purpose industrial processes.",
   mainNav: [
     {
       title: "Home",

@@ -4,10 +4,11 @@ import React, { useEffect, useState } from "react"
 
 import { SelectedPage } from "@/types/types"
 import Footer from "@/components/Footer"
+import About from "@/components/sections/About"
 import ContactUs from "@/components/sections/ContactUs"
+import Experience from "@/components/sections/Experience"
 import Home from "@/components/sections/Home"
 import Navbar from "@/components/sections/NavBar"
-import Experience from "@/components/sections/Experience"
 import Services from "@/components/sections/Services"
 
 export default function IndexPage() {
@@ -37,6 +38,7 @@ export default function IndexPage() {
           setSelectedPage={setSelectedPage}
         />
         <Home setSelectedPage={setSelectedPage} />
+        {/* <About setSelectedPage={setSelectedPage} /> */}
         <Services setSelectedPage={setSelectedPage} />
         <Experience setSelectedPage={setSelectedPage} />
         <ContactUs setSelectedPage={setSelectedPage} />

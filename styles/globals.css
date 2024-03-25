@@ -35,15 +35,15 @@
 
     --radius: 0.5rem;
 
-    --colorOne: 41 100% 85%;
-    --colorTwo: 41 100% 90%;
-    --colorThr: 41 100% 95%;
-    --colorFou: 41 100% 96%;
-    --colorFiv: 41 100% 95%;
-    --colorSix: 241 100% 90%;
-    --colorSev: 41 100% 93%;
-    --colorEig: 223 14% 95%;
-    --colorNin: 223 14% 75%;
+    --colorOne: 230 20% 55%;
+    --colorTwo: 230 20% 50%;
+    --colorThr: 230 20% 55%;
+    --colorFou: 230 20% 96%;
+    --colorFiv: 230 20% 85%;
+    --colorSix: 230 20% 90%;
+    --colorSev: 230 20% 85%;
+    --colorEig: 230 20% 92%;
+    --colorNin: 230 20% 95%;
   }
 
   .dark {

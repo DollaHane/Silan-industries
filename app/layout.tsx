@@ -50,7 +50,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
             <Providers>
               <div className="relative flex min-h-screen flex-col">
                 <div className="flex-1">{children}</div>
-                <BackgroundColor />
+                {/* <BackgroundColor /> */}
               </div>
               <GoogleAnalytics />
               <TailwindIndicator />

@@ -22,7 +22,7 @@ export default function NavbarLink({
 
   return (
     <AnchorLink
-      className={`${selectedPage === lowerCasePage ? "text-amber-400" : ""}`}
+      className={`${selectedPage === lowerCasePage ? "text-amber-500" : ""}`}
       href={`#${lowerCasePage}`}
       onClick={() => setSelectedPage(lowerCasePage)}
     >

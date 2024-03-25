@@ -1,17 +1,24 @@
 "use client"
 
-// REACT / NEXT Imports
 import React, { useState } from "react"
 import Image from "next/image"
-// NEED TWO ICONS
 import { Menu, X } from "lucide-react"
 
-// MISC Imports
 import { SelectedPage } from "@/types/types"
 import useMediaQuery from "@/hooks/useMediaQuery"
 
+import LogoDark from "../assets/Silan Logo Dark.png"
 import LogoWhite from "../assets/Silan Logo White.png"
 import Link from "../NavBarLink"
+import { ThemeToggle } from "../theme/theme-toggle"
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "../ui/Sheet"
 
 type Props = {
   isTopOfPage: boolean
@@ -24,27 +31,34 @@ export default function Navbar({
   selectedPage,
   setSelectedPage,
 }: Props): React.JSX.Element {
-  const [isMenuToggled, setIsMenuToggled] = useState<boolean>(false)
   const isAboveMediumScreens = useMediaQuery("(min-width: 768px)")
 
   return (
     <nav className="fixed z-50 w-full">
-      <div className="flex h-20 w-full border-b p-4 backdrop-blur-md">
-        <div className="flex w-full">
+      <div className="flex h-20 w-full p-4 backdrop-blur-md">
+        <div className="relative flex w-full items-center justify-center">
           {/* LEFT SIDE */}
 
-          <Image alt="logo" src={LogoWhite} className="w-28" />
+          <Image
+            alt="logo"
+            src={LogoDark}
+            className="absolute left-0 flex w-28"
+          />
 
-          {/* RIGHT SIDE */}
           {isAboveMediumScreens ? (
             <div className="flex h-full w-full items-center justify-between">
               {/* NAVIGATION */}
-              <div className="ml-10 flex w-1/2 items-center justify-between text-center text-lg font-semibold">
+              <div className="mx-auto flex w-1/2 items-center justify-between text-center text-lg font-semibold">
                 <Link
                   page="Home"
                   selectedPage={selectedPage}
                   setSelectedPage={setSelectedPage}
                 />
+                {/* <Link
+                  page="About"
+                  selectedPage={selectedPage}
+                  setSelectedPage={setSelectedPage}
+                /> */}
                 <Link
                   page="Services"
                   selectedPage={selectedPage}
@@ -61,61 +75,54 @@ export default function Navbar({
                   setSelectedPage={setSelectedPage}
                 />
               </div>
+              {/* <ThemeToggle/> */}
             </div>
           ) : (
             <div className="flex h-full w-full items-center justify-end">
-              <button
-                className="p-4"
-                onClick={() => setIsMenuToggled(!isMenuToggled)}
-              >
-                <Menu size={20} />
-              </button>
+              <Sheet>
+                <SheetTrigger>
+                  <Menu size={25} />
+                </SheetTrigger>
+                <SheetContent>
+                  <SheetHeader>
+                    <SheetTitle>Menu</SheetTitle>
+                    <SheetDescription>
+                      {/* NAVIGATION */}
+                      <div className="mt-5 grid h-40 w-full grid-cols-1 gap-5 text-center text-lg font-semibold text-primary">
+                        <Link
+                          page="Home"
+                          selectedPage={selectedPage}
+                          setSelectedPage={setSelectedPage}
+                        />
+                        <Link
+                          page="About"
+                          selectedPage={selectedPage}
+                          setSelectedPage={setSelectedPage}
+                        />
+                        <Link
+                          page="Services"
+                          selectedPage={selectedPage}
+                          setSelectedPage={setSelectedPage}
+                        />
+                        <Link
+                          page="Experience"
+                          selectedPage={selectedPage}
+                          setSelectedPage={setSelectedPage}
+                        />
+                        <Link
+                          page="Contact Us"
+                          selectedPage={selectedPage}
+                          setSelectedPage={setSelectedPage}
+                        />
+                      </div>
+                    </SheetDescription>
+                  </SheetHeader>
+                </SheetContent>
+              </Sheet>
             </div>
           )}
         </div>
-        {/* <div className=''/> ADD A DIVIDER */}
       </div>
-
-      {/* MOBILE MENU MODAL */}
-      {!isAboveMediumScreens && isMenuToggled && (
-        <div className="absolute right-0 top-0 z-40 h-screen w-full">
-          <div className="z-40 flex h-full w-full border-l p-4 backdrop-blur-md">
-            {/* CLOSE ICON */}
-            <div className="absolute right-0 top-0 p-8">
-              <button
-                className=""
-                onClick={() => setIsMenuToggled(!isMenuToggled)}
-              >
-                <X size={20} />
-              </button>
-            </div>
-
-            {/* NAVIGATION */}
-            <div className="mt-5 grid h-40 w-full grid-cols-1 gap-5 text-center text-lg font-semibold">
-              <Link
-                page="Home"
-                selectedPage={selectedPage}
-                setSelectedPage={setSelectedPage}
-              />
-              <Link
-                page="Services"
-                selectedPage={selectedPage}
-                setSelectedPage={setSelectedPage}
-              />
-              <Link
-                page="Experience"
-                selectedPage={selectedPage}
-                setSelectedPage={setSelectedPage}
-              />
-              <Link
-                page="Contact Us"
-                selectedPage={selectedPage}
-                setSelectedPage={setSelectedPage}
-              />
-            </div>
-          </div>
-        </div>
-      )}
     </nav>
   )
 }
