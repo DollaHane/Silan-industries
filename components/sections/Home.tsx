@@ -9,7 +9,7 @@ import useMediaQuery from "@/hooks/useMediaQuery"
 
 import Graphic from "../assets/Graphic_2_2.png"
 import Model from "../assets/Rugby.png"
-import { Button } from "../ui/Button"
+import { Button } from "@/components/ui/Button"
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void

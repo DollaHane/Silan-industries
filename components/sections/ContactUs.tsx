@@ -24,7 +24,7 @@ import { toast } from "@/hooks/use-toast"
 import { Input } from "@/components/ui/Input"
 
 import PigeonMap from "../PigeonMap"
-import { Button } from "../ui/Button"
+import { Button } from "@/components/ui/Button"
 import { FieldLabel } from "../ui/FieldLabel"
 import { Textarea } from "../ui/TextArea"
 
