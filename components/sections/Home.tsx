@@ -6,10 +6,10 @@ import AnchorLink from "react-anchor-link-smooth-scroll"
 
 import { SelectedPage } from "@/types/types"
 import useMediaQuery from "@/hooks/useMediaQuery"
+import { Button } from "../ui/Button"
 
 import Graphic from "../assets/Graphic_2_2.png"
 import Model from "../assets/Rugby.png"
-import { Button } from "@/components/ui/Button"
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void
