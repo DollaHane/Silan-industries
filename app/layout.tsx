@@ -46,7 +46,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <body
           className={cn("min-h-screen bg-background font-opensans antialiased")}
         >
-          <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+          <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
             <Providers>
               <div className="relative flex min-h-screen flex-col">
                 <div className="flex-1">{children}</div>

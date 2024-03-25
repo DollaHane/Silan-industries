@@ -94,11 +94,11 @@ export default function Navbar({
                           selectedPage={selectedPage}
                           setSelectedPage={setSelectedPage}
                         />
-                        <Link
+                        {/* <Link
                           page="About"
                           selectedPage={selectedPage}
                           setSelectedPage={setSelectedPage}
-                        />
+                        /> */}
                         <Link
                           page="Services"
                           selectedPage={selectedPage}
