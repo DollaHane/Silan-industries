@@ -22,7 +22,7 @@ import {
 } from "@/lib/validators/formValidators"
 import { toast } from "@/hooks/use-toast"
 import { Input } from "@/components/ui/Input"
-import { Button } from "../ui/Button"
+import { Button } from "../Button"
 import PigeonMap from "../PigeonMap"
 import { FieldLabel } from "../ui/FieldLabel"
 import { Textarea } from "../ui/TextArea"
