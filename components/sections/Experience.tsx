@@ -108,8 +108,14 @@ export default function Experience({ setSelectedPage }: Props) {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious variant="icon" className="-left-0" />
-            <CarouselNext variant="icon" className="-right-0" />
+            <CarouselPrevious
+              variant="outline"
+              className="-left-0 border-transparent"
+            />
+            <CarouselNext
+              variant="outline"
+              className="-right-0 border-transparent"
+            />
           </Carousel>
         </motion.div>
       </motion.div>
