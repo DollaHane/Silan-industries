@@ -43,7 +43,7 @@ export const cards = [
         { para: "Headstock & Tailstock structures." },
         { para: "Gantries." },
         { para: "Robot cell super structures." },
-        { para: "Large scale locamotive weld tooling." },
+        { para: "Large scale locomotive weld tooling." },
       ],
       image: Project3,
     },
