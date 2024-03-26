@@ -49,7 +49,7 @@ export default function Experience({ setSelectedPage }: Props) {
             With over 20 years of expertise in designing tooling and specialized
             equipment for the automotive industry, we excel in delivering a
             diverse range of engineering solutions tailored to meet your unique
-            requirements. Whether it's optimizing small manual processes or
+            requirements. Whether it&apos;s optimizing small manual processes or
             developing intricate automated systems that demand precision, we are
             equipped to provide the solutions that elevate your operations.
           </p>

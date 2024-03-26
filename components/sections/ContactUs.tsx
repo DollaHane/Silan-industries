@@ -145,8 +145,8 @@ export default function ContactUs({ setSelectedPage }: Props) {
           }}
         >
           <p className="text-sm md:text-lg">
-            For any inquiries or to schedule a consultation, don't hesitate to
-            reach out to us. Fill out the form below, and let's start optimizing
+            For any inquiries or to schedule a consultation, don&apos;t hesitate to
+            reach out to us. Fill out the form below, and let&apos;s start optimizing
             your engineering solutions together. We look forward to hearing from
             you and exploring how we can enhance your production processes.
           </p>
