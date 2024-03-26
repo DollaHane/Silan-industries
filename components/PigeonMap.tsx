@@ -1,12 +1,10 @@
-
-
 import React, { useState } from "react"
 import { Map, Marker, ZoomControl } from "pigeon-maps"
 import { maptiler } from "pigeon-maps/providers"
 
 export default function PigeonMap() {
   const dotenv = require("dotenv")
-dotenv.config()
+  dotenv.config()
 
   const [hue, setHue] = useState(355)
 
@@ -18,13 +16,13 @@ dotenv.config()
     <Map
       provider={maptilerProvider}
       dprs={[1, 2]} // this provider supports HiDPI tiles
-      defaultCenter={[-33.968, 25.442]}
+      defaultCenter={[-33.9673, 25.442]}
       defaultZoom={10}
     >
       <ZoomControl />
       <Marker
         width={50}
-        anchor={[-33.968, 25.442]}
+        anchor={[-33.9673, 25.442]}
         color={color}
         onClick={() => setHue(hue + 20)}
       />

@@ -6,10 +6,10 @@ import AnchorLink from "react-anchor-link-smooth-scroll"
 
 import { SelectedPage } from "@/types/types"
 import useMediaQuery from "@/hooks/useMediaQuery"
-import { Button } from "../Button"
 
 import Graphic from "../assets/Graphic_2_2.png"
 import Model from "../assets/Rugby.png"
+import { Button } from "../Button"
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void
@@ -44,11 +44,13 @@ export default function Home({ setSelectedPage }: Props) {
             }}
           >
             {/* MAIN HEADING */}
-            <div className="bold flex bg-gradient-to-r from-amber-300 via-amber-500 to-amber-400 bg-clip-text bg-repeat-x p-2 text-4xl text-transparent md:text-4xl lg:text-5xl">
+            <div className="bold flex bg-gradient-to-r from-amber-400 via-amber-500 to-amber-400 bg-clip-text bg-repeat-x p-2 text-4xl text-transparent md:text-5xl lg:text-6xl">
               <div className="mx-auto flex flex-wrap md:mx-0">
                 <p className="pr-1 pt-1 font-prompt font-semibold">SILAN</p>
                 <p className="p-1 font-prompt font-semibold">INDUSTRIES</p>
-                <p className="mt-0 p-1 font-prompt text-base">(Pty) Ltd</p>
+                <span className="mt-0 p-1 font-prompt text-base">
+                  (Pty) Ltd
+                </span>
               </div>
             </div>
 
@@ -63,36 +65,25 @@ export default function Home({ setSelectedPage }: Props) {
               automated production systems, robotic applications and special
               purpose industrial processes.
             </p>
-          </motion.div>
-
-          {/* ACTION BUTTONS */}
-          <motion.div
-            className="flex content-center justify-center p-2 text-center"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.5 }}
-            transition={{ duration: 0.5 }}
-            variants={{
-              hidden: { opacity: 0, y: -50 },
-              visible: { opacity: 1, y: 0 },
-            }}
-          >
-            <AnchorLink
-              onClick={() => setSelectedPage(SelectedPage.ContactUs)}
-              href={`#${SelectedPage.ContactUs}`}
-            >
-              <Button
-                variant="outline"
-                className="mt-10 border-2 border-zinc-300 bg-transparent font-bold text-primary shadow-md hover:border-2 hover:border-amber-500 hover:bg-transparent hover:text-primary"
+            {/* ACTION BUTTONS */}
+            <div className="flex content-center justify-center p-2 text-center">
+              <AnchorLink
+                onClick={() => setSelectedPage(SelectedPage.ContactUs)}
+                href={`#${SelectedPage.ContactUs}`}
               >
-                LET&apos;S CONNECT
-              </Button>
-            </AnchorLink>
+                <Button
+                  variant="outline"
+                  className="mt-10 h-[50px] w-[200px] border border-transparent bg-zinc-800 text-lg font-bold text-zinc-100 shadow-md transition duration-200 hover:scale-[0.99] hover:border-transparent hover:text-zinc-100 hover:shadow-2xl hover:shadow-yellow-500"
+                >
+                  LET&apos;S CONNECT
+                </Button>
+              </AnchorLink>
+            </div>
           </motion.div>
         </div>
 
         {/* IMAGE / RIGHT SIDE */}
-        <div className="w-full">
+        <div className="flex w-full items-center justify-center">
           <motion.div
             className="align-center relative -top-5 mx-auto flex w-full max-w-[700px] justify-center"
             initial="hidden"
@@ -118,7 +109,7 @@ export default function Home({ setSelectedPage }: Props) {
         </div>
       </motion.div>
       <motion.div
-        className="mt-5 flex w-full items-center justify-center md:mt-20"
+        className="mt-12 flex w-full items-center justify-center"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.5 }}
@@ -128,7 +119,7 @@ export default function Home({ setSelectedPage }: Props) {
           visible: { opacity: 1, y: 0 },
         }}
       >
-        <div className="mt-10 flex w-full max-w-[900px] flex-wrap items-center justify-center space-x-5">
+        <div className="flex w-full max-w-[900px] flex-wrap items-center justify-center space-x-5">
           <h1 className="mb-5 flex h-10 w-auto items-center justify-center rounded-full bg-gradient-to-tr from-zinc-50 to-blue-50 px-5 font-semibold shadow-lg">
             Assembly & Testing Stations
           </h1>

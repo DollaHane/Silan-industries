@@ -22,6 +22,7 @@ import {
 } from "@/lib/validators/formValidators"
 import { toast } from "@/hooks/use-toast"
 import { Input } from "@/components/ui/Input"
+
 import { Button } from "../Button"
 import PigeonMap from "../PigeonMap"
 import { FieldLabel } from "../ui/FieldLabel"
@@ -234,7 +235,7 @@ export default function ContactUs({ setSelectedPage }: Props) {
                   <div className="relative w-full flex-col">
                     <Input
                       type="email"
-                      placeholder="@"
+                      placeholder="Email"
                       id={field.name}
                       name={field.name}
                       value={field.state.value}

@@ -110,11 +110,11 @@ export default function Experience({ setSelectedPage }: Props) {
             </CarouselContent>
             <CarouselPrevious
               variant="outline"
-              className="-left-0 border-transparent"
+              className="-left-0 border-transparent bg-zinc-800 text-zinc-100 hover:border-transparent"
             />
             <CarouselNext
               variant="outline"
-              className="-right-0 border-transparent"
+              className="-right-5 border-transparent bg-zinc-800 text-zinc-100 hover:border-transparent"
             />
           </Carousel>
         </motion.div>
