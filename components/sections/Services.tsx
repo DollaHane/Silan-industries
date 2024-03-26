@@ -48,6 +48,17 @@ export default function Services({ setSelectedPage }: Props) {
           Services:
         </h1>
 
+        <p className="mb-10 p-2 text-sm md:text-lg">
+          Enhance your production capabilities with our engineering expertise.
+          As specialists in automated production systems, robotics, and custom
+          industrial processes, we are dedicated to crafting high-quality
+          solutions that boost productivity and efficiency, ultimately saving
+          our clients valuable time and resources. Our services cater
+          specifically to the automotive, aerospace, military, and packaging
+          sectors, providing tailored engineering solutions for your unique
+          needs.
+        </p>
+
         {/* CARDS */}
         <motion.div
           className="relative"

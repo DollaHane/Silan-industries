@@ -46,11 +46,12 @@ export default function Experience({ setSelectedPage }: Props) {
           }}
         >
           <p className="text-sm md:text-lg">
-            With more than 20 years experience in designing tooling and special
-            purpose equipment in the automotive industry, we are capable of
-            delivering a wide variety of engineering solutions to suite your
-            individual needs. From small manual processes, to larger more
-            complex automated systems that require that extra touch.
+            With over 20 years of expertise in designing tooling and specialized
+            equipment for the automotive industry, we excel in delivering a
+            diverse range of engineering solutions tailored to meet your unique
+            requirements. Whether it's optimizing small manual processes or
+            developing intricate automated systems that demand precision, we are
+            equipped to provide the solutions that elevate your operations.
           </p>
         </motion.div>
         <motion.div

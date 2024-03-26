@@ -145,9 +145,10 @@ export default function ContactUs({ setSelectedPage }: Props) {
           }}
         >
           <p className="text-sm md:text-lg">
-            For any queries, or to book a consulation, please do not hesitate to
-            contact us by completing the form below. We would really appreciate
-            hearing from you.
+            For any inquiries or to schedule a consultation, don't hesitate to
+            reach out to us. Fill out the form below, and let's start optimizing
+            your engineering solutions together. We look forward to hearing from
+            you and exploring how we can enhance your production processes.
           </p>
         </motion.div>
 
