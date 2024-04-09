@@ -85,9 +85,9 @@ export default function Experience({ setSelectedPage }: Props) {
                         />
                       </div>
                       <div className="h-full w-full rounded-2xl bg-background px-3 shadow-lg">
-                        <h1 className="mt-5 w-full text-left font-extrabold md:text-xl">
+                        <h3 className="mt-5 w-full text-left font-extrabold md:text-xl">
                           {card.title}
-                        </h1>
+                        </h3>
                         <p className=" my-5 text-start text-sm">
                           {card.paragraph}
                         </p>

@@ -55,16 +55,18 @@ export default function Home({ setSelectedPage }: Props) {
             </div>
 
             {/* INTRODUCTION TEXT */}
-            <h2 className="bold my-3 p-2 font-prompt text-2xl font-medium md:text-2xl lg:text-3xl">
-              AUTOMATED PRODUCTION SYSTEMS DESIGN & SIMULATION
-            </h2>
+            <h1 className="bold my-3 p-2 font-prompt text-2xl font-medium md:text-2xl lg:text-3xl">
+            {/* RELOOK AT KEYWORDS */}
+              AUTOMATED SYSTEMS ENGINEERING & SIMULATION
+            </h1>
 
             {/* INTRODUCTION TEXT */}
-            <p className="my-3 p-2 text-sm md:text-lg">
+            <h2 className="my-3 p-2 text-sm md:text-lg">
+              {/* RELOOK AT KEYWORDS */}
               A level 1 B-BBEE engineering company specialising in the design of
               automated production systems, robotic applications and special
               purpose industrial processes.
-            </p>
+            </h2>
             {/* ACTION BUTTONS */}
             <div className="flex content-center justify-center p-2 text-center">
               <AnchorLink
@@ -120,24 +122,24 @@ export default function Home({ setSelectedPage }: Props) {
         }}
       >
         <div className="flex w-full max-w-[900px] flex-wrap items-center justify-center space-x-5">
-          <h1 className="mb-5 flex h-10 w-auto items-center justify-center rounded-full bg-gradient-to-tr from-zinc-50 to-blue-50 px-5 font-semibold shadow-lg">
+          <h3 className="mb-5 flex h-10 w-auto items-center justify-center rounded-full bg-gradient-to-tr from-zinc-50 to-blue-50 px-5 font-semibold shadow-lg">
             Assembly & Testing Stations
-          </h1>
-          <h1 className="mb-5 flex h-10 w-auto items-center justify-center rounded-full bg-gradient-to-tr from-zinc-50 to-blue-50 px-5 font-semibold shadow-lg">
+          </h3>
+          <h3 className="mb-5 flex h-10 w-auto items-center justify-center rounded-full bg-gradient-to-tr from-zinc-50 to-blue-50 px-5 font-semibold shadow-lg">
             Robot Applications
-          </h1>
-          <h1 className="mb-5 flex h-10 w-auto items-center justify-center rounded-full bg-gradient-to-tr from-zinc-50 to-blue-50 px-5 font-semibold shadow-lg">
+          </h3>
+          <h3 className="mb-5 flex h-10 w-auto items-center justify-center rounded-full bg-gradient-to-tr from-zinc-50 to-blue-50 px-5 font-semibold shadow-lg">
             Super Structures
-          </h1>
-          <h1 className="mb-5 flex h-10 w-auto items-center justify-center rounded-full bg-gradient-to-tr from-zinc-50 to-blue-50 px-5 font-semibold shadow-lg">
+          </h3>
+          <h3 className="mb-5 flex h-10 w-auto items-center justify-center rounded-full bg-gradient-to-tr from-zinc-50 to-blue-50 px-5 font-semibold shadow-lg">
             Special Purpose Tooling
-          </h1>
-          <h1 className="mb-5 flex h-10 w-auto items-center justify-center rounded-full bg-gradient-to-tr from-zinc-50 to-blue-50 px-5 font-semibold shadow-lg">
+          </h3>
+          <h3 className="mb-5 flex h-10 w-auto items-center justify-center rounded-full bg-gradient-to-tr from-zinc-50 to-blue-50 px-5 font-semibold shadow-lg">
             Material Handling
-          </h1>
-          <h1 className="mb-5 flex h-10 w-auto items-center justify-center rounded-full bg-gradient-to-tr from-zinc-50 to-blue-50 px-5 font-semibold shadow-lg">
+          </h3>
+          <h3 className="mb-5 flex h-10 w-auto items-center justify-center rounded-full bg-gradient-to-tr from-zinc-50 to-blue-50 px-5 font-semibold shadow-lg">
             Conveyor Systems
-          </h1>
+          </h3>
         </div>
       </motion.div>
     </section>

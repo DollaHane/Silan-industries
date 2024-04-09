@@ -61,7 +61,6 @@ export default function Services({ setSelectedPage }: Props) {
 
         {/* CARDS */}
         <div className="mb-16 flex w-full flex-wrap items-center justify-evenly">
-
           {/* DESIGN CARD */}
           <motion.div
             className="relative"
@@ -93,7 +92,9 @@ export default function Services({ setSelectedPage }: Props) {
                   </DialogTrigger>
                   <DialogContent>
                     <DialogHeader>
-                      <DialogTitle>Process & CAD Design</DialogTitle>
+                      <DialogTitle>
+                        <h3>Engineering & CAD Design</h3>
+                      </DialogTitle>
                       <DialogDescription>
                         <p className="mb-5">
                           With proficiencies in Siemens NX Unigraphics and
@@ -130,7 +131,9 @@ export default function Services({ setSelectedPage }: Props) {
           >
             <Card className="transition duration-500 hover:scale-[0.95]">
               <CardHeader>
-                <CardTitle>Project Management</CardTitle>
+                <CardTitle>
+                  <h3>Project Management</h3>
+                </CardTitle>
               </CardHeader>
               <CardContent className="relative flex">
                 <Image
@@ -173,7 +176,6 @@ export default function Services({ setSelectedPage }: Props) {
             </Card>
           </motion.div>
 
-
           {/* MNF CARD */}
           <motion.div
             className="relative"
@@ -188,7 +190,9 @@ export default function Services({ setSelectedPage }: Props) {
           >
             <Card className="transition duration-500 hover:scale-[0.95]">
               <CardHeader>
-                <CardTitle>Manufacturing</CardTitle>
+                <CardTitle>
+                  <h3>Manufacturing</h3>
+                </CardTitle>
               </CardHeader>
               <CardContent className="relative flex">
                 <Image
@@ -241,7 +245,9 @@ export default function Services({ setSelectedPage }: Props) {
           >
             <Card className="transition duration-500 hover:scale-[0.95]">
               <CardHeader>
-                <CardTitle>Automation</CardTitle>
+                <CardTitle>
+                  <h3>Automation</h3>
+                </CardTitle>
               </CardHeader>
               <CardContent className="relative flex">
                 <Image
