@@ -302,7 +302,7 @@ export default function ContactUs({ setSelectedPage }: Props) {
               <Button
                 type="submit"
                 variant="outline"
-                className="mt-10 w-32 border-2 border-transparent font-bold hover:border-amber-500"
+                className="mt-10 border border-transparent bg-zinc-800 font-bold text-zinc-100 shadow-md transition duration-200 hover:scale-[0.95] hover:border-transparent hover:text-zinc-100"
               >
                 SEND
               </Button>

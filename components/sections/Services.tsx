@@ -60,28 +60,30 @@ export default function Services({ setSelectedPage }: Props) {
         </p>
 
         {/* CARDS */}
-        <motion.div
-          className="relative"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 0.5 }}
-          variants={{
-            hidden: { opacity: 0, y: 50 },
-            visible: { opacity: 1, y: 0 },
-          }}
-        >
-          <div className="mb-16 flex w-full flex-wrap items-center justify-evenly">
+        <div className="mb-16 flex w-full flex-wrap items-center justify-evenly">
+
+          {/* DESIGN CARD */}
+          <motion.div
+            className="relative"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.5 }}
+            variants={{
+              hidden: { opacity: 0, y: 50 },
+              visible: { opacity: 1, y: 0 },
+            }}
+          >
             <Card className="transition duration-500 hover:scale-[0.95]">
               <CardHeader>
                 <CardTitle>Process & CAD Design</CardTitle>
               </CardHeader>
               <CardContent className="relative flex">
                 <Image
-                  className="absolute -bottom-[100px] -right-0"
+                  className="absolute -bottom-[60px] -right-0"
                   src={Design}
                   alt="design"
-                  width={180}
+                  width={140}
                 />
               </CardContent>
               <CardFooter className="relative flex h-10 w-full">
@@ -112,17 +114,30 @@ export default function Services({ setSelectedPage }: Props) {
                 </Dialog>
               </CardFooter>
             </Card>
+          </motion.div>
 
+          {/* PM CARD */}
+          <motion.div
+            className="relative"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            variants={{
+              hidden: { opacity: 0, y: 50 },
+              visible: { opacity: 1, y: 0 },
+            }}
+          >
             <Card className="transition duration-500 hover:scale-[0.95]">
               <CardHeader>
                 <CardTitle>Project Management</CardTitle>
               </CardHeader>
               <CardContent className="relative flex">
                 <Image
-                  className="absolute -bottom-[80px] -right-0"
+                  className="absolute -bottom-[50px] -right-0"
                   src={Timing}
                   alt="timing"
-                  width={190}
+                  width={140}
                 />
               </CardContent>
               <CardFooter className="relative flex h-10 w-full">
@@ -156,17 +171,31 @@ export default function Services({ setSelectedPage }: Props) {
                 </Dialog>
               </CardFooter>
             </Card>
+          </motion.div>
 
+
+          {/* MNF CARD */}
+          <motion.div
+            className="relative"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            variants={{
+              hidden: { opacity: 0, y: 50 },
+              visible: { opacity: 1, y: 0 },
+            }}
+          >
             <Card className="transition duration-500 hover:scale-[0.95]">
               <CardHeader>
                 <CardTitle>Manufacturing</CardTitle>
               </CardHeader>
               <CardContent className="relative flex">
                 <Image
-                  className="absolute -bottom-[110px] -right-0"
+                  className="absolute -bottom-[80px] -right-0"
                   src={Manufacture}
                   alt="manufacture"
-                  width={180}
+                  width={140}
                 />
               </CardContent>
               <CardFooter className="relative flex h-10 w-full">
@@ -196,17 +225,30 @@ export default function Services({ setSelectedPage }: Props) {
                 </Dialog>
               </CardFooter>
             </Card>
+          </motion.div>
 
+          {/* AUTO CARD */}
+          <motion.div
+            className="relative"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.5, delay: 0.6 }}
+            variants={{
+              hidden: { opacity: 0, y: 50 },
+              visible: { opacity: 1, y: 0 },
+            }}
+          >
             <Card className="transition duration-500 hover:scale-[0.95]">
               <CardHeader>
                 <CardTitle>Automation</CardTitle>
               </CardHeader>
               <CardContent className="relative flex">
                 <Image
-                  className="absolute -bottom-[80px] -right-0"
+                  className="absolute -bottom-[60px] -right-0"
                   src={Automation}
                   alt="automation"
-                  width={180}
+                  width={140}
                 />
               </CardContent>
               <CardFooter className="relative flex h-10 w-full">
@@ -247,8 +289,8 @@ export default function Services({ setSelectedPage }: Props) {
                 </Dialog>
               </CardFooter>
             </Card>
-          </div>
-        </motion.div>
+          </motion.div>
+        </div>
 
         {/* IMAGES */}
         <div className="mt-20 grid grid-cols-1 gap-5 md:grid-cols-2">

@@ -73,7 +73,7 @@ export default function Home({ setSelectedPage }: Props) {
               >
                 <Button
                   variant="outline"
-                  className="mt-10 h-[50px] w-[200px] border border-transparent bg-zinc-800 text-lg font-bold text-zinc-100 shadow-md transition duration-200 hover:scale-[0.99] hover:border-transparent hover:text-zinc-100 hover:shadow-2xl hover:shadow-yellow-500"
+                  className="mt-10 border border-transparent bg-zinc-800 font-bold text-zinc-100 shadow-md transition duration-200 hover:scale-[0.95] hover:border-transparent hover:text-zinc-100"
                 >
                   LET&apos;S CONNECT
                 </Button>
