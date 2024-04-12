@@ -20,15 +20,15 @@ export default function Home({ setSelectedPage }: Props) {
   return (
     <section
       id="home"
-      className="h-auto md:h-screen w-full justify-center text-center md:text-left"
+      className="h-auto md:h-screen shadow-lg w-full justify-center overflow-hidden text-center md:text-left"
     >
       <motion.div
-        className="w-full grid grid-cols-1 md:grid-cols-2"
+        className="w-full h-full grid grid-cols-1 md:grid-cols-2"
         onViewportEnter={() => setSelectedPage(SelectedPage.Home)}
       >
         {/* HEADING LOGO & SLOGAN */}
         <motion.div
-          className="z-30 mx-auto mb-8 mt-28 flex h-full w-full flex-col p-10"
+          className="z-30 mx-auto mb-8 mt-16 flex h-full w-full flex-col p-10"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
@@ -69,17 +69,17 @@ export default function Home({ setSelectedPage }: Props) {
 
         {/* IMAGE */}
         <motion.div
-          className="z-10 flex h-44 md:h-screen w-full overflow-hidden"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 0.5 }}
-          variants={{
-            hidden: { opacity: 0, x: 50 },
-            visible: { opacity: 1, x: 0 },
-          }}
+          className="z-10 flex h-44 md:h-full w-full overflow-hidden"
+          // initial="hidden"
+          // whileInView="visible"
+          // viewport={{ once: true, amount: 0.5 }}
+          // transition={{ duration: 0.5 }}
+          // variants={{
+          //   hidden: { opacity: 0, x: 50 },
+          //   visible: { opacity: 1, x: 0 },
+          // }}
         >
-          <Image className="object-cover shadow-lg" alt="home-pageGraphic" src={Model} />
+          <Image className="object-cover h-full" alt="home-pageGraphic" src={Model} />
         </motion.div>
       </motion.div>
     </section>
