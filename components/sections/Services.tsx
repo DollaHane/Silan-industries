@@ -44,7 +44,7 @@ export default function Services({ setSelectedPage }: Props) {
         onViewportEnter={() => setSelectedPage(SelectedPage.Services)}
         className="mx-auto mt-10 h-auto w-full"
       >
-        <h1 className="mb-16 font-prompt text-2xl font-bold md:text-4xl">
+        <h1 className="mb-5 font-prompt text-2xl font-bold md:text-4xl">
           Services:
         </h1>
 
